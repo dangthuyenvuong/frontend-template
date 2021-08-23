@@ -18,6 +18,7 @@ h1,h2,h3,h4,h5,h6{
 :root{
     --primaryColor: #c04ae2;
     --headerHeight: 70px;
+    --red: red;
 }
 
 /* ---------------- */
@@ -95,17 +96,25 @@ textarea.form-control::placeholder,
 input.form-control::placeholder{
     color: #999999;
 }
-/* ---------------- */
 
+.error-text{
+    height: 0;
+    position: relative;
+    top: -23px;
+    font-size: 13px;
+    color: var(--red);
+}
+/* ---------------- */
+/* :root{
+    scroll-behavior: smooth;
+} */
 #header{
     height: var(--headerHeight);
     display: flex;
     align-items: center;
-    position: fixed;
     width: 100vw;
     z-index: 10000;
-    background: white;
-    box-shadow: 0 0 10px #00000047;
+    position: fixed;
 }
 #header .container{
     display: flex;
@@ -119,6 +128,7 @@ input.form-control::placeholder{
 
 #header nav{
     margin-left: auto;
+    position: relative;
 }
 #header .btn{
     line-height: 40px;
@@ -140,6 +150,20 @@ input.form-control::placeholder{
 #header .social a{
     display: block;
     margin-left: 15px;
+}
+
+#header.fixed{
+    background: white;
+    box-shadow: 0 0 10px #00000047;
+}
+
+#header .active-menu{
+    height: 3px;
+    background: var(--primaryColor);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all 0.15s linear;
 }
 
 #main{
@@ -531,7 +555,13 @@ input.form-control::placeholder{
     border: none;
     outline: none;
 }
-
+.section7 .erorr-text{
+    height: 0;
+    position: relative;
+    top: -23px;
+    font-size: 13px;
+    color: var(--red);
+}
 .section7 .form textarea::placeholder,
 .section7 .form input::placeholder{
     color: #999999;
@@ -687,6 +717,7 @@ input.form-control::placeholder{
     height: 70px;
     padding-right: 30px;
     border-radius: 10px;
+    position: relative;
 }
 #footer > .top  h3{
     font-size: 24px;
@@ -733,4 +764,11 @@ input.form-control::placeholder{
 
 #footer > .bottom .content .copyright{
     margin-left: auto;
+}
+
+#footer .error-text{
+    left: 0;
+    bottom: 0;
+    display: block;
+    position: absolute;
 }
