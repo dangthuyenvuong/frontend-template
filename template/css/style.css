@@ -309,7 +309,7 @@ input.form-control::placeholder{
 /* --------------- */
 
 .section4{
-    padding: 100px 0;
+    padding: 100px 0 150px 0;
     background: whitesmoke;
 }
 .section4 .top{
@@ -325,20 +325,22 @@ input.form-control::placeholder{
     display: grid;
     grid-template-columns: repeat(3, auto) ;
     column-gap: 30px;
-    row-gap: 30px;
 }
 .section4 .list > div{
-    background: white;
-    border-radius: 22px;
-    padding: 75px 45px;
     text-align: center;
 }
-.section4 .list > div:nth-child(3n + 2){
+.section4 .list > div > div{
+    padding: 75px 45px;
+    margin-bottom: 30px;
+    background: white;
+    border-radius: 22px;
+}
+/* .section4 .list > div:nth-child(3n + 2) > div{
     transform: translate(0,50px);
 }
-.section4 .list > div:nth-child(3n + 3){
+.section4 .list > div:nth-child(3n + 3) > div{
     transform: translate(0,100px);
-}
+} */
 .section4 .list > div .cover{
     margin-bottom: 50px;
 }
@@ -463,6 +465,15 @@ input.form-control::placeholder{
     width: 100%;
     height: 100%;
     object-fit: contain;
+    
+}
+.section6 .post .cover img{
+    box-shadow: 0 0 1.5rem rgb(17 17 17 / 70%);
+    transition: all .3s ease-in;
+}
+.section6 .post .cover img:hover{
+    box-shadow: 0 0 50px rgb(17 17 17 / 50%);
+    transform: rotate(-2deg) translateY(-5px) scale(1.025);
 }
 .section6 .list .item .name{
     margin-top: 45px;
@@ -513,12 +524,46 @@ input.form-control::placeholder{
 }
 .section6 .post .cover{
     width: 50%;
-}
-.section6 .post .cover img{
-    width: 100%;
-    object-fit: contain;
+    height: 500px;
+    position: relative;
 }
 
+.section6 .post .cover img{
+    height: 100%;
+    object-fit: contain;
+    visibility: hidden;
+    transition: all .3s ease-in-out;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+}
+.section6 .post .cover img.active{
+    visibility: visible;
+    opacity: 1;
+}
+.section6 .carousel-cell{
+    width: 600px;
+}
+.section6 .flickity-prev-next-button{
+    display: none;
+}
+.section6 .flickity-page-dots{
+    display: flex;
+    bottom: -45px;
+    column-gap: 10px;
+}
+.section6 .flickity-page-dots li{
+    width: 12px;
+    height: 12px;
+    margin: 0;
+    border-radius: 100px;
+    background: var(--primaryColor);
+    opacity: 1;
+    transition: all .3s ease-in-out;
+}
+.section6 .flickity-page-dots li.is-selected{
+    width: 30px;
+}
 /* ------------------------- */
 .section7{
     padding: 100px 0;

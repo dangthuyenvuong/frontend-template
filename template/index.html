@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link rel="stylesheet" href="./js/lib/flickity/flickity.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -44,8 +46,8 @@
             </div>
         </div>
     </header>
-    <main id="main">
-        <section class="banner">
+    <main id="main" data-scroll-container>
+        <section class="banner" data-scroll-section>
             <div class="container">
                 <div class="left">
                     <h1 class="h1">Work Smartly with Endless Possibility</h1>
@@ -57,33 +59,34 @@
                 </div>
             </div>
             <img src="./img/section1.png" alt="">
+            
         </section>
-        <section class="section2" id="about">
+        <section class="section2" id="about" data-scroll-section>
             <div class="container">
-                <div class="top">
+                <div class="top" data-scroll data-scroll-speed="3" data-scroll-direction="horizontal">
                     <p class="sup">About</p>
                     <h2 class="h2">Control your business with a single tap</h2>
                 </div>
                 <div class="list">
-                    <div style="--color:#fcd7df;">
+                    <div style="--color:#fcd7df;" data-scroll data-scroll-direction="vertical" data-scroll-speed="6" data-scroll-class="appear" data-scroll-repeat="true">
                         <img src="./img/anchor.png" alt="">
                         <h3 class="title">Complete business Control</h3>
                         <p>Pore et dolore magna aliqua. Ut enim ad minim veniam, quis nos trud exerci tation</p>
                     </div>
-                    <div style="--color:#c9f3e2;">
-                        <img src="./img/document.png" alt="">
+                    <div style="--color:#c9f3e2;" data-scroll data-scroll-direction="vertical" data-scroll-speed="4">
+                        <img src="./img/document.png" alt="" >
                         <h3 class="title">Critical analytics and report</h3>
                         <p>Pore et dolore magna aliqua. Ut enim ad minim veniam, quis nos trud exerci tation</p>
                     </div>
-                    <div style="--color:#f2d5ba;">
-                        <img src="./img/user.png" alt="">
+                    <div style="--color:#f2d5ba;" alt="" data-scroll data-scroll-direction="vertical" data-scroll-speed="2">
+                        <img src="./img/user.png" >
                         <h3 class="title">User satisfaction guarranted</h3>
                         <p>Pore et dolore magna aliqua. Ut enim ad minim veniam, quis nos trud exerci tation</p>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="section3">
+        <section class="section3" data-scroll-section>
             <div class="container">
                 <div class="left">
                     <h2 class="h2">Most innovative creative team</h2>
@@ -99,65 +102,72 @@
                 </div>
             </div>
         </section>
-        <section class="section4" id="service">
+        <section class="section4" id="service" data-scroll-section>
             <div class="container">
-                <div class="top">
+                <div class="top" data-scroll data-scroll-speed="-6" data-scroll-direction="horizontal">
                     <p class="sup">Service</p>
                     <h2 class="h2"> Service to solve all kinds of business problem</h2>
                 </div>
                 <div class="list">
-                    <div>
-                        <img class="cover" src="./img/section4-1.png" alt="">
-                        <h3 class="h3">Business Automation</h3>
-                        <p>Pore et dolore magna aliqua. Ut enim ad minim veniam, quis nos trud exerci tation </p>
-                        <a href="#">
-                            <img src="./img/arrow-right-icon.png" alt="">
-                        </a>
+
+                    <div data-scroll data-scroll-speed="2">
+                        <div>
+                            <img class="cover" src="./img/section4-1.png" alt="" >
+                            <h3 class="h3">Business Automation</h3>
+                            <p>Pore et dolore magna aliqua. Ut enim ad minim veniam, quis nos trud exerci tation </p>
+                            <a href="#">
+                                <img src="./img/arrow-right-icon.png" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <img class="cover" src="./img/section4-4.png" alt="">
+                            <h3 class="h3">Business Automation</h3>
+                            <p>Pore et dolore magna aliqua. Ut enim ad minim veniam, quis nos trud exerci tation </p>
+                            <a href="#">
+                                <img src="./img/arrow-right-icon.png" alt="">
+                            </a>
+                        </div>
                     </div>
-                    <div>
-                        <img class="cover" src="./img/section4-2.png" alt="">
-                        <h3 class="h3">Business Automation</h3>
-                        <p>Pore et dolore magna aliqua. Ut enim ad minim veniam, quis nos trud exerci tation </p>
-                        <a href="#">
-                            <img src="./img/arrow-right-icon.png" alt="">
-                        </a>
+                    <div data-scroll data-scroll-speed="4">
+                        <div>
+                            <img class="cover" src="./img/section4-2.png" alt="">
+                            <h3 class="h3">Business Automation</h3>
+                            <p>Pore et dolore magna aliqua. Ut enim ad minim veniam, quis nos trud exerci tation </p>
+                            <a href="#">
+                                <img src="./img/arrow-right-icon.png" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <img class="cover" src="./img/section4-5.png" alt="">
+                            <h3 class="h3">Business Automation</h3>
+                            <p>Pore et dolore magna aliqua. Ut enim ad minim veniam, quis nos trud exerci tation </p>
+                            <a href="#">
+                                <img src="./img/arrow-right-icon.png" alt="">
+                            </a>
+                        </div>
                     </div>
-                    <div>
-                        <img class="cover" src="./img/section4-3.png" alt="">
-                        <h3 class="h3">Business Automation</h3>
-                        <p>Pore et dolore magna aliqua. Ut enim ad minim veniam, quis nos trud exerci tation </p>
-                        <a href="#">
-                            <img src="./img/arrow-right-icon.png" alt="">
-                        </a>
-                    </div>
-                    <div>
-                        <img class="cover" src="./img/section4-4.png" alt="">
-                        <h3 class="h3">Business Automation</h3>
-                        <p>Pore et dolore magna aliqua. Ut enim ad minim veniam, quis nos trud exerci tation </p>
-                        <a href="#">
-                            <img src="./img/arrow-right-icon.png" alt="">
-                        </a>
-                    </div>
-                    <div>
-                        <img class="cover" src="./img/section4-5.png" alt="">
-                        <h3 class="h3">Business Automation</h3>
-                        <p>Pore et dolore magna aliqua. Ut enim ad minim veniam, quis nos trud exerci tation </p>
-                        <a href="#">
-                            <img src="./img/arrow-right-icon.png" alt="">
-                        </a>
-                    </div>
-                    <div>
-                        <img class="cover" src="./img/section4-6.png" alt="">
-                        <h3 class="h3">Business Automation</h3>
-                        <p>Pore et dolore magna aliqua. Ut enim ad minim veniam, quis nos trud exerci tation </p>
-                        <a href="#">
-                            <img src="./img/arrow-right-icon.png" alt="">
-                        </a>
+                    <div data-scroll data-scroll-speed="6">
+                        <div>
+                            <img class="cover" src="./img/section4-3.png" alt="">
+                            <h3 class="h3">Business Automation</h3>
+                            <p>Pore et dolore magna aliqua. Ut enim ad minim veniam, quis nos trud exerci tation </p>
+                            <a href="#">
+                                <img src="./img/arrow-right-icon.png" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <img class="cover" src="./img/section4-6.png" alt="">
+                            <h3 class="h3">Business Automation</h3>
+                            <p>Pore et dolore magna aliqua. Ut enim ad minim veniam, quis nos trud exerci tation </p>
+                            <a href="#">
+                                <img src="./img/arrow-right-icon.png" alt="">
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="section5" id="work">
+        <section class="section5" id="work" data-scroll-section>
             <div class="container">
                 <div class="top">
                     <p class="sup">Work</p>
@@ -209,7 +219,7 @@
                 </div>
             </div>
         </section>
-        <section class="section6" id="news">
+        <section class="section6" id="news" data-scroll-section>
             <div class="container">
                 <div class="top">
                     <p class="sup">News</p>
@@ -258,23 +268,52 @@
                 </div>
                 <div class="post">
                     <div class="content">
-                        <div class="sup">Testimonial</div>
-                        <h2 class="h2">They are awesome!</h2>
-                        <p>Kollit a do eiusmod tempor incididunt ut labore et do irure dolor in reprehenderit in
-                            voluptate
-                            velit esse cillum dolore eu fugiat nulla pariatur. </p>
-                        <div class="info">
-                            <span class="name">Kabir Manja </span>
-                            <span class="title">Music Producer</span>
+                        <div class="main-carousel">
+                            <div class="carousel-cell">
+                                <div class="sup">Testimonial</div>
+                                <h2 class="h2">They are awesome!</h2>
+                                <p>Kollit a do eiusmod tempor incididunt ut labore et do irure dolor in reprehenderit in
+                                    voluptate
+                                    velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                                <div class="info">
+                                    <span class="name">Kabir Manja </span>
+                                    <span class="title">Music Producer</span>
+                                </div>
+                            </div>
+                            <div class="carousel-cell">
+                                <div class="sup">Testimonial</div>
+                                <h2 class="h2">They are awesome!</h2>
+                                <p>Kollit a do eiusmod tempor incididunt ut labore et do irure dolor in reprehenderit in
+                                    voluptate
+                                    velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                                <div class="info">
+                                    <span class="name">Kabir Manja </span>
+                                    <span class="title">Music Producer</span>
+                                </div>
+                            </div>
+                            <div class="carousel-cell">
+                                <div class="sup">Testimonial</div>
+                                <h2 class="h2">They are awesome!</h2>
+                                <p>Kollit a do eiusmod tempor incididunt ut labore et do irure dolor in reprehenderit in
+                                    voluptate
+                                    velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                                <div class="info">
+                                    <span class="name">Kabir Manja </span>
+                                    <span class="title">Music Producer</span>
+                                </div>
+                            </div>
                         </div>
+                       
                     </div>
                     <div class="cover">
-                        <img src="./img/section6-5.png" alt="">
+                        <img class="active" src="./img/section6-5.png" alt="">
+                        <img src="https://images.unsplash.com/photo-1554490828-442467b562dd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="">
+                        <img src="https://images.unsplash.com/photo-1536146021566-627ce3c4d813?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80" alt="">
                     </div>
                 </div>
             </div>
         </section>
-        <section class="section7" id="contact">
+        <section class="section7" id="contact" data-scroll-section>
             <div class="container">
                 <div class="top">
                     <p class="sup">Contact Us</p>
@@ -326,7 +365,7 @@
                 </div>
             </div>
         </section>
-        <section class="section8">
+        <section class="section8" data-scroll-section>
             <div class="container">
                 <div class="top">
                     <p class="sup">From Our Blog</p>
@@ -476,6 +515,8 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <script src="js/lib/flickity/flickity.pkgd.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
 
