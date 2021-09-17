@@ -8,14 +8,14 @@ export const routers: RouterPram[] = [
         component: MainLayout,
         routers: [
             {
-                path: '/account',
+                path: '/auth',
                 component: AccoutLayout,
                 routers: [
-                    {
-                        path: '/order',
-                        exact: true,
-                        component: lazy(() => import('../pages/account/order'))
-                    },
+                    // {
+                    //     path: '/order',
+                    //     exact: true,
+                    //     component: lazy(() => import('../pages/account/order'))
+                    // },
                     {
                         exact: true,
                         component: lazy(() => import('../pages/account/info'))

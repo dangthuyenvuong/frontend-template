@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { ChangeEvent, useState } from "react"
 import { ObjectType } from "typescript"
 
 let patternModel: { [key: string]: RegExp } = {
@@ -19,38 +19,41 @@ type RuleItem = {
     required?: true,
     pattern?: RegExp | string
 }
-type RuleState = {
-    [k: string]: RuleItem
-}
+type RuleState<T extends Object> = Partial<{
+    [k in keyof T]: RuleItem
+}>
 
-type MessageState = {
-    [k: string]: any
-}
+type MessageState<T extends Object> = Partial<{
+    [k in keyof T]: {
+        [k in keyof RuleItem]: string
+    }
+}>
 
-type ErrorState<T extends Object> = {
-    [k in T]: any
-}
+
+type ErrorState<T extends Object> = Partial<{
+    [k in keyof T]: string
+}>
 
 type UseFormReturn<T> = {
-    register: (name: keyof T, rule: any) => {
-        name: string,
-        onChange: Function,
-        defaultValue: any
+    register: (name: keyof T, rule?: RuleItem, message?: any) => {
+        name: keyof T,
+        onChange: (event: ChangeEvent<HTMLInputElement>) => void,
+        defaultValue: string 
     },
     handleSubmit: Function,
     form: T,
-    error: Function
+    error: ErrorState<T>
 }
 
-export function useForm<T extends Object>(initvalue = {}): UseFormReturn<T> {
+export function useForm<T extends { [key: string]: any }>(initvalue?: T): UseFormReturn<T> {
 
-    let [form, setForm] = useState<T>(initvalue as T)
+    let [form] = useState<any>(initvalue || {})
     let [error, setError] = useState<ErrorState<T>>({})
-    let [initRule, setInitRule] = useState<RuleState>({})
-    let [initMessage, setInitMessage] = useState<MessageState>({})
+    let [initRule] = useState<RuleState<T>>({})
+    let [initMessage] = useState<MessageState<T>>({})
 
-    function inputChange(ev: any) {
-        let name = ev.currentTarget.name
+    function inputChange(ev: ChangeEvent<HTMLInputElement>) {
+        let name = ev.currentTarget.name as string
         let value = ev.currentTarget.value
 
         form[name] = value
@@ -62,14 +65,14 @@ export function useForm<T extends Object>(initvalue = {}): UseFormReturn<T> {
 
         for (let i in initRule) {
             let r = initRule[i]
-            if (r.required && !form[i]?.trim()) {
+            if (r?.required && !form[i]?.trim()) {
                 errorObj[i] = initMessage?.[i]?.required || 'Trường này không được để trống'
                 continue
             }
 
-            if (r.pattern) {
+            if (r?.pattern) {
                 let pattern = r.pattern
-                if (patternModel[r.pattern as string]) {
+                if (r?.pattern && patternModel[r?.pattern as string]) {
                     pattern = patternModel[r.pattern as string]
                 }
                 if (form[i] && !(pattern instanceof RegExp && pattern.test(form[i]))) {
@@ -77,11 +80,11 @@ export function useForm<T extends Object>(initvalue = {}): UseFormReturn<T> {
                 }
             }
 
-            if (r.min && form[i]?.length < r.min) {
+            if (r?.min && form[i]?.length < r.min) {
                 errorObj[i] = initMessage?.[i]?.min || `Trường này phải dài hơn ${r.min} ký tự`
             }
 
-            if (r.max && form[i]?.length > r.max) {
+            if (r?.max && form[i]?.length > r.max) {
                 errorObj[i] = initMessage?.[i]?.max || `Trường này không được nhiều hơn ${r.max} ký tự`
             }
 
@@ -90,7 +93,7 @@ export function useForm<T extends Object>(initvalue = {}): UseFormReturn<T> {
         return errorObj;
     }
 
-    function register(name: string, rule?: RuleItem, message?: any) {
+    function register(name: keyof T, rule?: RuleItem, message?: any) {
         if (!form[name]) {
             form[name] = ''
         }
@@ -129,6 +132,5 @@ export function useForm<T extends Object>(initvalue = {}): UseFormReturn<T> {
         error
     }
 }
-
 
 

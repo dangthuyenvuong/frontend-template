@@ -1,14 +1,15 @@
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import { routerConfig, AppProvider } from './core';
-import { reducers } from './redux';
+import { reducers } from './store';
 import { routers } from './routers';
 import en from './locale/en/index.json'
 import vi from './locale/vi/index.json'
+import saga from 'store/saga';
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppProvider reducers={reducers} translate={{ en, vi }} language="en">
+    <AppProvider reducers={reducers} translate={{ en, vi }} language="en" saga={saga}>
       <Suspense fallback={<div>Loading....</div>}>
         {routerConfig(routers)}
       </Suspense>

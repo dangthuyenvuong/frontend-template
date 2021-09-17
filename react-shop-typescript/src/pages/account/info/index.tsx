@@ -1,15 +1,22 @@
 import { useForm } from "core"
+import { useDispatch } from "react-redux"
+import { loginAction } from "store/reducers/authReducer"
 
 
 type Form = {
-    email: string
+    username: string
     password: string
 }
 
 const AccoutnInfo: React.FC = () => {
     let { register, form, handleSubmit, error } = useForm<Form>()
 
-    const submit = (form: Form) => {}
+    let dispatch = useDispatch()
+
+    const submit = (form: Form) => {
+        dispatch(loginAction(form))
+    }
+
 
     return (
         <section className="py-12">
@@ -30,7 +37,7 @@ const AccoutnInfo: React.FC = () => {
                                                 <label className="sr-only" htmlFor="loginEmail">
                                                     Email Address *
                                                 </label>
-                                                <input {...register('email', { pattern: 'email' })} className="form-control form-control-sm" id="loginEmail" type="email" placeholder="Email Address *" required />
+                                                <input {...register('username', { pattern: 'email' })} className="form-control form-control-sm" id="loginEmail" type="email" placeholder="Email Address *" required />
                                             </div>
                                         </div>
                                         <div className="col-12">
