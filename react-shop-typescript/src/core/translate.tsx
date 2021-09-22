@@ -1,6 +1,12 @@
 import { createContext, useCallback, useContext, useState } from "react"
 
-const Context = createContext({})
+type ContextProp = {
+    t: (key: string) => string,
+    selectLang : (lang: string) => void,
+    language: string
+}
+
+const Context = createContext<ContextProp>({} as ContextProp)
 
 export const TranslateProvider : React.FC<{
     language?: string,

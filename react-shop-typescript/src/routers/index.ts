@@ -27,6 +27,10 @@ export const routers: RouterPram[] = [
                 exact: true,
                 component: lazy(() => import('../pages/home'))
             },
+            {
+                exact: true,
+                component: lazy(() => import('../pages/page404'))
+            },
         ]
     }
 ]
