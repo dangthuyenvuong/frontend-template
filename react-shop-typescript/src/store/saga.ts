@@ -1,42 +1,28 @@
-import { takeLatest, call, put } from 'redux-saga/effects'
-import cartService from 'services/cart'
-import userService from 'services/user'
-import { TYPE_LOGIN, TYPE_LOGIN_USER } from './reducers/authReducer'
-import { TYPE_GET_CART } from './reducers/cartReducer'
+import wishlistService from "services/wishlistService"
+import { call, put, takeLatest } from 'redux-saga/effects'
+import { wishlistAction } from "store/actions/wishlistAction"
+import { GET_WISHLIST } from "./reducers/wishlistReducers"
+import { AUTH_LOGOUT, FETCH_LOGIN } from "./type"
+import { fetchLogin, logout } from "./sagas/auth"
 
 
 
-
-function* loginFetch(action: any): any {
+function* getWishlist(): any {
     try {
-        let res = yield call(userService.login, action.payload)
-        if (res.error) {
+       let res = yield call(wishlistService.getwishlist1)
+    //    console.log('res: ' + res)
+       if (res.error) {
 
-        } else {
-            yield put({ type: TYPE_LOGIN_USER, payload: res.data })
-        }
-    } catch (err) {
-
-    }
-}
-
-function* getCartAfterLogin(): any {
-    try {
-        let res = yield call(cartService.getCart)
-        if (res.error) {
-
-        } else {
-            yield put({ type: TYPE_GET_CART })
-        }
-    } catch (err) {
-
-    }
+       } else {
+           yield put({ type: GET_WISHLIST })
+       }
+    } catch(err) {}
 }
 
 function* saga() {
-    yield takeLatest(TYPE_LOGIN, loginFetch)
-    yield takeLatest(TYPE_LOGIN_USER, getCartAfterLogin)
-
+    yield takeLatest(GET_WISHLIST, getWishlist) 
+    yield takeLatest(FETCH_LOGIN, fetchLogin) 
+    yield takeLatest(AUTH_LOGOUT, logout)
 }
 
 export default saga

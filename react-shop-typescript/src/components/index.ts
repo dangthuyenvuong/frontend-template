@@ -1,2 +1,3 @@
-export * from './Breadcrumbs'
-export * from './Paginate'
+export * from './CartModal'
+export * from './SearchModal'
+export * from './ErrorInput'

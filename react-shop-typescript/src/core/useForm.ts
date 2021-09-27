@@ -1,3 +1,4 @@
+
 import React, { ChangeEvent, useState } from "react"
 import { ObjectType } from "typescript"
 
@@ -6,21 +7,16 @@ let patternModel: { [key: string]: RegExp } = {
     phone: /(84|0[3|5|7|8|9])+([0-9]{8})/,
     url: /^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/
 }
-
-
-type FormState = {
-    [k: string]: any
-}
-
-
 type RuleItem = {
     min?: number,
     max?: number,
     required?: true,
-    pattern?: RegExp | string
+    pattern?: RegExp | 'email' | 'phone' | 'url',
+    confirm?: string
 }
+
 type RuleState<T extends Object> = Partial<{
-    [k in keyof T]: RuleItem
+    [key in keyof T]: RuleItem
 }>
 
 type MessageState<T extends Object> = Partial<{
@@ -29,23 +25,24 @@ type MessageState<T extends Object> = Partial<{
     }
 }>
 
-
 type ErrorState<T extends Object> = Partial<{
-    [k in keyof T]: string
+    [key in keyof T]: string
 }>
 
 type UseFormReturn<T> = {
     register: (name: keyof T, rule?: RuleItem, message?: any) => {
         name: keyof T,
         onChange: (event: ChangeEvent<HTMLInputElement>) => void,
-        defaultValue: string 
+        defaultValue: string
     },
     handleSubmit: Function,
     form: T,
     error: ErrorState<T>
 }
 
-export function useForm<T extends { [key: string]: any }>(initvalue?: T): UseFormReturn<T> {
+
+
+export function useForm<T extends Object>(initvalue = {}): UseFormReturn<T> {
 
     let [form] = useState<any>(initvalue || {})
     let [error, setError] = useState<ErrorState<T>>({})
@@ -53,10 +50,22 @@ export function useForm<T extends { [key: string]: any }>(initvalue?: T): UseFor
     let [initMessage] = useState<MessageState<T>>({})
 
     function inputChange(ev: ChangeEvent<HTMLInputElement>) {
-        let name = ev.currentTarget.name as string
+        let name = ev.currentTarget.name
         let value = ev.currentTarget.value
+        
 
-        form[name] = value
+        if (ev.currentTarget.getAttribute('type') === 'checkbox') {
+            if (value &&  value !== 'true' && value !== 'false') {
+                form[name] = ev.currentTarget.checked ? value : ''
+            } else {
+                form[name] = ev.currentTarget.checked
+                console.log(value)
+            }
+
+        } else {
+            form[name] = value
+        }
+
     }
 
     function check() {
@@ -72,7 +81,7 @@ export function useForm<T extends { [key: string]: any }>(initvalue?: T): UseFor
 
             if (r?.pattern) {
                 let pattern = r.pattern
-                if (r?.pattern && patternModel[r?.pattern as string]) {
+                if (patternModel[r.pattern as string]) {
                     pattern = patternModel[r.pattern as string]
                 }
                 if (form[i] && !(pattern instanceof RegExp && pattern.test(form[i]))) {
@@ -88,9 +97,13 @@ export function useForm<T extends { [key: string]: any }>(initvalue?: T): UseFor
                 errorObj[i] = initMessage?.[i]?.max || `Trường này không được nhiều hơn ${r.max} ký tự`
             }
 
+            if (r?.confirm && form[r.confirm] !== form[i]) {
+                errorObj[i] = initMessage?.[i]?.confirm || `Vui lòng điền giông ${r.confirm}`
+            }
+
         }
 
-        return errorObj;
+        return errorObj
     }
 
     function register(name: keyof T, rule?: RuleItem, message?: any) {
@@ -119,9 +132,9 @@ export function useForm<T extends { [key: string]: any }>(initvalue?: T): UseFor
             let errorObject = check()
             if (Object.keys(errorObject).length === 0) {
                 callback(form)
-            } else {
-                setError(errorObject)
             }
+
+            setError(errorObject)
         }
     }
 
@@ -132,5 +145,3 @@ export function useForm<T extends { [key: string]: any }>(initvalue?: T): UseFor
         error
     }
 }
-
-

@@ -1,33 +1,36 @@
-import { createContext, useCallback, useContext, useState } from "react"
+import React, { createContext, useState, useCallback, useContext } from 'react'
 
-type ContextProp = {
-    t: (key: string) => string,
-    selectLang : (lang: string) => void,
-    language: string
+
+type TranslateContext = {
+    t: (key: string) => string
 }
 
-const Context = createContext<ContextProp>({} as ContextProp)
+const AppContext = createContext<TranslateContext>({} as TranslateContext)
 
-export const TranslateProvider : React.FC<{
+export const TranslateProvider: React.FC<{
     language?: string,
-    translate: any
-}> = ({ children, language = 'en', translate = {} }) => {
+    translate: any,
+    Context?: any
+}> = ({ children, language = "en", translate = {}, Context = AppContext }) => {
 
     let [state, setState] = useState({
-        language: localStorage.getItem('lang') || language, 
+        language: localStorage.getItem('lang') || language,
         translate
     })
 
-    const selectLang = useCallback((lang) => {
-        setState({
-            ...state,
-            language: lang
-        })
+    const selectLang = useCallback(
+        (lang) => {
+            setState({
+                ...state,
+                language: lang
+            })
 
-        localStorage.setItem('lang', lang)
-    }, [])
+            localStorage.setItem('lang', lang)
+        },
+        [],
+    )
 
-    const t = (name: string) : string => {
+    const t = (name: string): string => {
         return state.translate[state.language]?.[name] || name
     }
 
@@ -37,15 +40,12 @@ export const TranslateProvider : React.FC<{
         t
     }
 
-
     return (
-        <Context.Provider value={value}>{children}</Context.Provider>
+        <AppContext.Provider value={value}>{children}</AppContext.Provider>
     )
 }
 
 
-
-
 export const useTranslate = () => {
-    return useContext(Context)
+    return useContext(AppContext)
 }

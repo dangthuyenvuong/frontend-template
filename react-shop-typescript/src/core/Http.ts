@@ -1,4 +1,4 @@
-export default class Http{
+export default class Http {
     get(){}
     post(){}
     put(){}

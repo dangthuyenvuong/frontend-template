@@ -1,36 +1,65 @@
-import { RouterPram } from "core/routerConfig";
-import { lazy } from "react";
-import { AccoutLayout } from "../pages/account/_layout";
-import { MainLayout } from "../pages/_layout/MainLayout";
+import React, { lazy } from 'react'
+import Account from '../pages/account'
 
-export const routers: RouterPram[] = [
+import Home from '../pages/home'
+import MainLayout from 'pages/_layout/MainLayout'
+import Page404 from '../pages/404'
+import { RouterParam } from 'core'
+import AccountLayout from 'pages/account/_layout'
+import AuthLayout from 'pages/_layout/AuthLayout'
+
+export const routers: RouterParam[] = [
     {
         component: MainLayout,
         routers: [
             {
+                path: '/',
+                component: Home,
+                exact: true
+            },
+            {
                 path: '/auth',
-                component: AccoutLayout,
+                component: AuthLayout,
+                auth: false,
                 routers: [
-                    // {
-                    //     path: '/order',
-                    //     exact: true,
-                    //     component: lazy(() => import('../pages/account/order'))
-                    // },
                     {
+                        path: '/login',
+                        component: lazy(() => import('../pages/auth/login')),
                         exact: true,
-                        component: lazy(() => import('../pages/account/info'))
+                    },
+                    {
+                        path: '/register',
+                        component: lazy(() => import('../pages/auth/register')),
+                        exact: true,
                     },
                 ]
             },
             {
-                path: '/',
-                exact: true,
-                component: lazy(() => import('../pages/home'))
+                path: '/account',
+                component: AccountLayout,
+                auth: true,
+                routers: [
+                    {
+                        path: '/info',
+                        component: lazy(() => import('../pages/account/accountInfo')),
+                        exact: true,
+                    },
+                    {
+                        path: '/orders',
+                        component: lazy(() => import('../pages/account/accountOrders')),
+                        exact: true,
+                    },
+                    {
+                        path: '/wishlist',
+                        component: lazy(() => import('../pages/account/wishList'))
+                    },
+                ]
             },
             {
-                exact: true,
-                component: lazy(() => import('../pages/page404'))
-            },
+                component: Page404
+            }
         ]
     }
 ]
+
+
