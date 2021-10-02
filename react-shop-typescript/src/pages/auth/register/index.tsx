@@ -1,7 +1,6 @@
 import ErrorInput from 'components/ErrorInput'
 import { useForm, useTranslate } from 'core'
 import React from 'react'
-import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 
 
@@ -18,8 +17,7 @@ const Register: React.FC = () => {
     let { t } = useTranslate()
 
 
-    let { register, form, handleSubmit, error } = useForm<RegisterForm>()
-    const dispatch = useDispatch()
+    let { register,  handleSubmit, error } = useForm<RegisterForm>()
     const submit = (form: RegisterForm) => {
         // dispatch(authFetchAction(form))
         console.log(form)

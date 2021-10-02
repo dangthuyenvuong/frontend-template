@@ -1,11 +1,9 @@
 import ErrorInput from 'components/ErrorInput'
 import { useForm, useTranslate } from 'core'
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch} from 'react-redux'
 import { Link } from 'react-router-dom'
-import { StateStore } from 'store'
 import { authFetchAction } from 'store/actions/authAction'
-import { Redirect } from 'react-router-dom'
 
 
 type Form = {

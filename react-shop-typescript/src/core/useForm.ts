@@ -1,6 +1,6 @@
 
-import React, { ChangeEvent, useState } from "react"
-import { ObjectType } from "typescript"
+import { ChangeEvent, useState } from "react"
+
 
 let patternModel: { [key: string]: RegExp } = {
     email: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1, 3}\.[0-9]{1, 3}\.[0-9]{1, 3}\.[0-9]{1, 3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,

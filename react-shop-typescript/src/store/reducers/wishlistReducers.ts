@@ -1,5 +1,3 @@
-import React from 'react'
-
 export const GET_WISHLIST = 'GET_WISHLIST'
 
 const initState = {}

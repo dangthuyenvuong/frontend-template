@@ -1,3 +1,4 @@
+import { useTranslate } from 'core'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Blog from './components/Blog'
@@ -11,22 +12,23 @@ type NavbarProp = {
     mouseLeaveEvent: React.MouseEventHandler<HTMLElement>
 }
 
-const Navbar: React.FC<NavbarProp> = ({hoverEvent, mouseLeaveEvent}) => {
+const Navbar: React.FC<NavbarProp> = ({ hoverEvent, mouseLeaveEvent }) => {
+    let { t } = useTranslate()
 
     function _openCartModal() {
         let modal = document.getElementById("modalShoppingCart")
-        if(modal) {
+        if (modal) {
             modal.classList.add('show')
             modal.style.display = 'block'
             modal.style.transition = "all 2s ease-out"
-            modal.style.paddingRight = '19px'           
+            modal.style.paddingRight = '19px'
             modal.removeAttribute('aria-hidden')
             modal.setAttribute('aria-modal', 'true')
             // modal.style.transition = 'all .2s ease-in-out'
         }
     }
     return (
-        
+
         <nav className="navbar navbar-expand-lg navbar-light bg-white">
             {console.log('Navbar here')}
             <div className="container">
@@ -47,15 +49,15 @@ const Navbar: React.FC<NavbarProp> = ({hoverEvent, mouseLeaveEvent}) => {
                             <Link className="nav-link" data-toggle="dropdown" to="#" aria-expanded="true">Home</Link>
                             {/* Menu */}
                             <div className="dropdown-menu">to
-                                <HomeCard/>
+                                <HomeCard />
                             </div>
                         </li>
                         <li className="nav-item dropdown position-static" onMouseOver={hoverEvent} onMouseLeave={mouseLeaveEvent}>
                             {/* Toggle */}
-                            <Link className="nav-link" data-toggle="dropdown" to="#">Catalog</Link>
+                            <Link className="nav-link" data-toggle="dropdown" to="/product">{t('Product')}</Link>
                             {/* Menu */}
                             <div className="dropdown-menu w-100">
-                                <CatalogCard/>
+                                <CatalogCard />
                             </div>
                         </li>
                         <li className="nav-item dropdown" onMouseOver={hoverEvent} onMouseLeave={mouseLeaveEvent}>
@@ -63,7 +65,7 @@ const Navbar: React.FC<NavbarProp> = ({hoverEvent, mouseLeaveEvent}) => {
                             <Link className="nav-link" data-toggle="dropdown" to="#">Shop</Link>
                             {/* Menu */}
                             <div className="dropdown-menu" style={{ minWidth: '650px' }}>
-                                <Shop/>
+                                <Shop />
                             </div>
                         </li>
                         <li className="nav-item dropdown hovered" onMouseOver={hoverEvent} onMouseLeave={mouseLeaveEvent}>
@@ -71,7 +73,7 @@ const Navbar: React.FC<NavbarProp> = ({hoverEvent, mouseLeaveEvent}) => {
                             <Link className="nav-link" data-toggle="dropdown" to="#" aria-expanded="true">Pages</Link>
                             {/* Menu */}
                             <div className="dropdown-menu">
-                                <Pages/>
+                                <Pages />
                             </div>
                         </li>
                         <li className="nav-item dropdown hovered" onMouseOver={hoverEvent} onMouseLeave={mouseLeaveEvent}>
@@ -79,7 +81,7 @@ const Navbar: React.FC<NavbarProp> = ({hoverEvent, mouseLeaveEvent}) => {
                             <Link className="nav-link" data-toggle="dropdown" to="#" aria-expanded="true">Blog</Link>
                             {/* Menu */}
                             <div className="dropdown-menu">
-                                <Blog/>
+                                <Blog />
                             </div>
                         </li>
                         <li className="nav-item">

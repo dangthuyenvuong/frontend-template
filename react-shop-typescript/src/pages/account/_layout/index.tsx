@@ -1,12 +1,12 @@
 import React, { useCallback } from 'react'
 import { useDispatch } from 'react-redux'
-import { Link, NavLink } from 'react-router-dom'
+import {  NavLink } from 'react-router-dom'
 import { authLogoutAction } from 'store/actions/authAction'
 
 const AccountLayout: React.FC = ({ children }) => {
-    function navbarHandle(event: any) {
-        event.preventDefault()
-    }
+    // function navbarHandle(event: any) {
+    //     event.preventDefault()
+    // }
 
     let dispatch = useDispatch()
     const logout = useCallback((ev: React.MouseEvent) => {

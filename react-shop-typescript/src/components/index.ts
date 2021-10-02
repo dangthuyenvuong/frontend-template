@@ -1,3 +1,5 @@
 export * from './CartModal'
 export * from './SearchModal'
 export * from './ErrorInput'
+export * from './ProductCard'
+export * from './Pagination'

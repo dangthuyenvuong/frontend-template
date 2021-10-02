@@ -1,11 +1,5 @@
 import React from 'react'
-import { useTranslate } from '../../core/translate'
-import BestPick from './components/BestPick'
 import Brand from './components/Brand'
-import Categories from './components/Categories'
-import Countdown from './components/Countdown'
-import Features from './components/Features'
-import Promo from './components/Promo'
 import Review from './components/Review'
 import TopSeller from './components/TopSeller'
 

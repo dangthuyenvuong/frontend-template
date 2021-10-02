@@ -1,7 +1,6 @@
 import { Pagination } from 'components/Pagination'
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Link } from 'react-router-dom'
 import { StateStore } from 'store'
 import { wishlistAction } from 'store/actions/wishlistAction'
 import { convertQueryURLToObject } from 'utils'

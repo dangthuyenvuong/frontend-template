@@ -1,6 +1,5 @@
 import wishlistService from "services/wishlistService"
 import { call, put, takeLatest } from 'redux-saga/effects'
-import { wishlistAction } from "store/actions/wishlistAction"
 import { GET_WISHLIST } from "./reducers/wishlistReducers"
 import { AUTH_LOGOUT, FETCH_LOGIN } from "./type"
 import { fetchLogin, logout } from "./sagas/auth"

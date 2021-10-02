@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { AllHTMLAttributes } from 'react'
 import { Link } from 'react-router-dom'
 import { changeQueryURL, convertQueryURLToObject } from 'utils/url'
+import { useHistory } from 'react-router-dom'
 
 interface PaginateProp {
   currentPage: number
@@ -8,14 +9,13 @@ interface PaginateProp {
 }
 
 export const Pagination: React.FC<PaginateProp> = ({ currentPage, totalPage }) => {
-  let objectURL = convertQueryURLToObject()
 
-  console.log('objectURL: ' + objectURL)
+  let objectURL = convertQueryURLToObject()
 
   const renderPage = () => {
     let start = currentPage - 2,
       end = currentPage + 2
-      
+
 
     if (start < 1) {
       start = 1
@@ -27,14 +27,14 @@ export const Pagination: React.FC<PaginateProp> = ({ currentPage, totalPage }) =
 
     if ((end - start) < 4) {
       if (start === 1) {
-        if( currentPage === 2) {
+        if (currentPage === 2) {
           end += (currentPage - 1)
         } else {
           end += (currentPage + start)
         }
-        
+
       }
-      
+
       if (end === totalPage) {
         start = totalPage - 4
       }
@@ -43,7 +43,6 @@ export const Pagination: React.FC<PaginateProp> = ({ currentPage, totalPage }) =
         start = 1
       }
     }
-    console.log(`start: ${start} & end: ${end}`)
     let list = []
     for (let i = start; i <= end; i++) {
       list.push(
@@ -52,7 +51,6 @@ export const Pagination: React.FC<PaginateProp> = ({ currentPage, totalPage }) =
         </li>
       )
     }
-    console.log('list: ' + list)
     return list
   }
   return (

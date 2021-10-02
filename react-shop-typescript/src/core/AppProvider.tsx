@@ -1,6 +1,6 @@
 import React from 'react'
 import { useMemo } from 'react'
-import { combineReducers, createStore, compose, Reducer, applyMiddleware } from 'redux'
+import { createStore, compose, Reducer, applyMiddleware } from 'redux'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { TranslateProvider } from './translate'

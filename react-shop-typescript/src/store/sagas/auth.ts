@@ -17,6 +17,6 @@ export function* fetchLogin(action: any) : any{
     }
 }
 
-export function* logout() : any{
+export function logout() : any{
     localStorage.removeItem('login')
 }

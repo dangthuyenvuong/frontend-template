@@ -1,4 +1,4 @@
-import React, { createContext, useState, useCallback, useContext } from 'react'
+import React, { createContext, useState, useCallback, useContext, useEffect } from 'react'
 
 
 type TranslateContext = {
@@ -7,16 +7,25 @@ type TranslateContext = {
 
 const AppContext = createContext<TranslateContext>({} as TranslateContext)
 
+const _translate : TranslateContext = {
+    t : (key: string) => key 
+}
+
 export const TranslateProvider: React.FC<{
     language?: string,
     translate: any,
     Context?: any
 }> = ({ children, language = "en", translate = {}, Context = AppContext }) => {
 
+
     let [state, setState] = useState({
         language: localStorage.getItem('lang') || language,
         translate
     })
+
+    useEffect(() => {
+        _translate.t = t
+    }, [state])
 
     const selectLang = useCallback(
         (lang) => {
@@ -49,3 +58,5 @@ export const TranslateProvider: React.FC<{
 export const useTranslate = () => {
     return useContext(AppContext)
 }
+
+export const translate = (key: string) => _translate.t(key)

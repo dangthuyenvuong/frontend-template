@@ -1,5 +1,3 @@
-import { GET_WISHLIST } from "store/reducers/wishlistReducers"
-
 const wishlistService = {
     getWishlist() {
         try {

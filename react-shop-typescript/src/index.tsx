@@ -6,7 +6,6 @@ import { routers } from './routers';
 import en from './locale/en/index.json'
 import vi from './locale/vi/index.json'
 import saga from 'store/saga';
-import './App.css'
 
 ReactDOM.render(
   <React.StrictMode>
