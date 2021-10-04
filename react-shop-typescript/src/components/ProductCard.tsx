@@ -1,8 +1,14 @@
 import { Product } from '@types'
 import React from 'react'
+import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { addToCart } from 'store/actions/cartAction'
 
-export const ProductCard: React.FC<Product> = ({ name, price, real_price, slug, thumbnail_url }) => {
+export const ProductCard: React.FC<{ product: Product }> = ({ product }) => {
+    const dispatch = useDispatch()
+
+    let { name, real_price, slug, thumbnail_url } = product
+
     return (
         <div className="col-6 col-md-4">
             {/* Card */}
@@ -14,7 +20,7 @@ export const ProductCard: React.FC<Product> = ({ name, price, real_price, slug, 
                 {/* Image */}
                 <div className="card-img">
                     {/* Image */}
-                    <Link className="card-img-hover"  to={`/product/${slug}`}>
+                    <Link className="card-img-hover" to={`/product/${slug}`}>
                         <img className="card-img-top card-img-back" src={thumbnail_url} alt="..." />
                         <img className="card-img-top card-img-front" src={thumbnail_url} alt="..." />
                     </Link>
@@ -26,7 +32,7 @@ export const ProductCard: React.FC<Product> = ({ name, price, real_price, slug, 
                             </button>
                         </span>
                         <span className="card-action">
-                            <button className="btn btn-xs btn-circle btn-white-primary" data-toggle="button">
+                            <button onClick={() => dispatch(addToCart(product))} className="btn btn-xs btn-circle btn-white-primary" data-toggle="button">
                                 <i className="fe fe-shopping-cart" />
                             </button>
                         </span>
@@ -51,7 +57,7 @@ export const ProductCard: React.FC<Product> = ({ name, price, real_price, slug, 
                     </div>
                     {/* Price */}
                     <div className="font-weight-bold text-muted">
-                        {real_price?.toLocaleString('it-IT', {style : 'currency', currency : 'VND'})}
+                        {real_price?.toLocaleString('it-IT', { style: 'currency', currency: 'VND' })}
                     </div>
                 </div>
             </div>

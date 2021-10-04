@@ -1,6 +1,10 @@
 import { useTranslate } from 'core'
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { StateStore } from 'store'
+import { toggleCart } from 'store/actions/cartAction'
+import { useCartNumber } from 'store/selector'
 import Blog from './components/Blog'
 import CatalogCard from './components/CatalogCard'
 import HomeCard from './components/HomeCard'
@@ -13,20 +17,17 @@ type NavbarProp = {
 }
 
 const Navbar: React.FC<NavbarProp> = ({ hoverEvent, mouseLeaveEvent }) => {
-    let { t } = useTranslate()
+    const { t } = useTranslate()
+    const dispatch = useDispatch()
 
-    function _openCartModal() {
-        let modal = document.getElementById("modalShoppingCart")
-        if (modal) {
-            modal.classList.add('show')
-            modal.style.display = 'block'
-            modal.style.transition = "all 2s ease-out"
-            modal.style.paddingRight = '19px'
-            modal.removeAttribute('aria-hidden')
-            modal.setAttribute('aria-modal', 'true')
-            // modal.style.transition = 'all .2s ease-in-out'
-        }
+    let num = useCartNumber()
+
+    function _openCartModal(ev: React.MouseEvent) {
+        ev.preventDefault()
+        dispatch(toggleCart(true))
+
     }
+
     return (
 
         <nav className="navbar navbar-expand-lg navbar-light bg-white">
@@ -106,11 +107,11 @@ const Navbar: React.FC<NavbarProp> = ({ hoverEvent, mouseLeaveEvent }) => {
                             </Link>
                         </li>
                         <li className="nav-item ml-lg-n4">
-                            <Link className="nav-link" data-toggle="modal" to="#" onClick={_openCartModal}>
-                                <span data-cart-items={2}>
+                            <a className="nav-link" data-toggle="modal" href="#" onClick={_openCartModal}>
+                                <span data-cart-items={num}>
                                     <i className="fe fe-shopping-cart" />
                                 </span>
-                            </Link>
+                            </a>
                         </li>
                     </ul>
                 </div>

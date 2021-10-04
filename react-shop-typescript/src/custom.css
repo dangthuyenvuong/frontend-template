@@ -1,0 +1,8 @@
+.cart-input-num {
+    width: 50px;
+    text-align: center;
+    border: none;
+    appearance: none;
+    outline: none;
+    border: 1px solid #ccc;
+}

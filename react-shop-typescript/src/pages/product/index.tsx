@@ -160,7 +160,7 @@ const ProductPage: React.FC = () => {
                         {/* Products */}
                         <div className="row">
                             {
-                                data.data.map(e => <ProductCard key={e.id} {...e}/>)
+                                data.data.map(e => <ProductCard key={e.id} product={e}/>)
                             }
                         </div>
                         {/* Pagination */}
