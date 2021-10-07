@@ -98,7 +98,7 @@ const CartItem: React.FC<{
     }
 
     let { name, real_price, slug, thumbnail_url } = product
-
+    console.log(thumbnail_url)
     return (
         <li className="list-group-item">
             <div className="row align-items-center">

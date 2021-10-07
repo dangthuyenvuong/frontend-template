@@ -108,7 +108,7 @@ const Navbar: React.FC<NavbarProp> = ({ hoverEvent, mouseLeaveEvent }) => {
                         </li>
                         <li className="nav-item ml-lg-n4">
                             <a className="nav-link" data-toggle="modal" href="#" onClick={_openCartModal}>
-                                <span data-cart-items={num}>
+                                <span data-cart-items={num || undefined}>
                                     <i className="fe fe-shopping-cart" />
                                 </span>
                             </a>

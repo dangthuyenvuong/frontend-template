@@ -1,11 +1,11 @@
 import { Product } from "@types"
-import { CART_ADD_CART, CART_DECREMENT, CART_INCREMENT, CART_REMOVE, CART_TOGGLE_CART } from "store/type"
+import { CART_ADD_CART, CART_CLEAR_CART, CART_DECREMENT, CART_INCREMENT, CART_REMOVE, CART_TOGGLE_CART } from "store/type"
 
 
 
 type CartStore = {
     openCart: boolean,
-    list: { product: Product, num: number }[]
+    list: { product: Product, num: number }[],
 }
 
 type PayloadAction = {
@@ -16,7 +16,7 @@ type PayloadAction = {
 
 const initState: CartStore = {
     openCart: false,
-    list: []
+    list: JSON.parse(localStorage.getItem('cart') || '[]')
 }
 
 
@@ -37,7 +37,7 @@ const cartReducer = (state = initState, action: PayloadAction): CartStore => {
             }
         case CART_ADD_CART:
             let p = state.list.find(e => e.product.id === action.payload.id)
-            if(p){
+            if (p) {
                 p.num++
                 return {
                     ...state,
@@ -93,6 +93,11 @@ const cartReducer = (state = initState, action: PayloadAction): CartStore => {
                     ...state,
                     list: [...state.list]
                 }
+            }
+        case CART_CLEAR_CART:
+            return {
+                ...state,
+                list: []
             }
 
     }

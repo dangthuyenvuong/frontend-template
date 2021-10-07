@@ -2,11 +2,15 @@
 
 
 const authService = {
-    async login(user: {username: string, password: string}){
-        return {
-            username: 'dangthuyenvuong',
-            name: 'Đặng Thuyền Vương'
-        }
+    async login(user: { username: string, password: string }) {
+        return new Promise((res, reject) => {
+            setTimeout(() => {
+                res({
+                    username: 'dangthuyenvuong',
+                    name: 'Đặng Thuyền Vương'
+                })
+            }, 3000)
+        })
     }
 }
 

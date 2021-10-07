@@ -1,27 +1,13 @@
-import wishlistService from "services/wishlistService"
-import { call, put, takeLatest } from 'redux-saga/effects'
-import { GET_WISHLIST } from "./reducers/wishlistReducers"
-import { AUTH_LOGOUT, FETCH_LOGIN } from "./type"
-import { fetchLogin, logout } from "./sagas/auth"
+import { all } from 'redux-saga/effects';
+import { rootAuthSaga } from './sagas/auth';
+import { cartRootSaga } from './sagas/cart';
 
-
-
-function* getWishlist(): any {
-    try {
-       let res = yield call(wishlistService.getwishlist1)
-    //    console.log('res: ' + res)
-       if (res.error) {
-
-       } else {
-           yield put({ type: GET_WISHLIST })
-       }
-    } catch(err) {}
-}
 
 function* saga() {
-    yield takeLatest(GET_WISHLIST, getWishlist) 
-    yield takeLatest(FETCH_LOGIN, fetchLogin) 
-    yield takeLatest(AUTH_LOGOUT, logout)
+    yield all([
+        cartRootSaga(),
+        rootAuthSaga()
+    ])
 }
 
 export default saga
