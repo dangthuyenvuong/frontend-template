@@ -1,7 +1,7 @@
 import { Pagination } from 'components/Pagination'
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { StateStore } from 'store'
+import { RootState } from 'store'
 import { wishlistAction } from 'store/actions/wishlistAction'
 import { convertQueryURLToObject } from 'utils'
 
@@ -19,7 +19,7 @@ const Wishlist: React.FC = () => {
     } catch (err) { }
   }, [queryURLObject.page])
 
-  let wishlist = useSelector((store: StateStore) => store.wishlist)
+  let wishlist = useSelector((store: RootState) => store.wishlist)
   console.log('wishlist: ' + wishlist)
 
   // let wishlist = []

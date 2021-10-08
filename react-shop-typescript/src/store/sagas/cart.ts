@@ -1,16 +1,16 @@
 import { put, select, takeEvery, takeLatest } from "@redux-saga/core/effects";
-import { StateStore } from "store";
+import { RootState } from "store";
 import { AUTH_LOGOUT, CART_ADD_CART, CART_CHECK_LOGIN, CART_CLEAR_CART, CART_DECREMENT, CART_INCREMENT, CART_REMOVE, LOGIN } from "store/type";
 import { history } from "core";
 
 export function* changeCart(): any {
-    let store: StateStore = yield select()
+    let store: RootState = yield select()
 
     localStorage.setItem('cart', JSON.stringify(store.cart.list))
 }
 
 export function* addCartCheckLogin(action: any): any {
-    let store: StateStore = yield select()
+    let store: RootState = yield select()
     if (store.auth.login) {
         yield put({ type: CART_ADD_CART, payload: action.payload })
     } else {

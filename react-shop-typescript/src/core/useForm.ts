@@ -13,6 +13,7 @@ type RuleItem = {
     required?: true,
     pattern?: RegExp | 'email' | 'phone' | 'url',
     confirm?: string
+    check?: boolean
 }
 
 type RuleState<T extends Object> = Partial<{
@@ -52,10 +53,10 @@ export function useForm<T extends Object>(initvalue = {}): UseFormReturn<T> {
     function inputChange(ev: ChangeEvent<HTMLInputElement>) {
         let name = ev.currentTarget.name
         let value = ev.currentTarget.value
-        
+
 
         if (ev.currentTarget.getAttribute('type') === 'checkbox') {
-            if (value &&  value !== 'true' && value !== 'false') {
+            if (value && value !== 'true' && value !== 'false') {
                 form[name] = ev.currentTarget.checked ? value : ''
             } else {
                 form[name] = ev.currentTarget.checked
@@ -74,6 +75,7 @@ export function useForm<T extends Object>(initvalue = {}): UseFormReturn<T> {
 
         for (let i in initRule) {
             let r = initRule[i]
+
             if (r?.required && !form[i]?.trim()) {
                 errorObj[i] = initMessage?.[i]?.required || 'Trường này không được để trống'
                 continue
@@ -103,6 +105,15 @@ export function useForm<T extends Object>(initvalue = {}): UseFormReturn<T> {
 
         }
 
+        for (let i in initRule) {
+            let r = initRule[i]
+
+            if (typeof r?.check !== 'undefined' && !r.check) {
+                delete errorObj[i]
+            }
+
+        }
+
         return errorObj
     }
 
@@ -128,8 +139,10 @@ export function useForm<T extends Object>(initvalue = {}): UseFormReturn<T> {
     }
     function handleSubmit(callback: Function) {
         return (ev: any) => {
+
             ev.preventDefault()
             let errorObject = check()
+
             if (Object.keys(errorObject).length === 0) {
                 callback(form)
             }

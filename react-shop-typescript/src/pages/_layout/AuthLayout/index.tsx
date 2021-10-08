@@ -1,10 +1,10 @@
 import { useSelector } from "react-redux"
 import { Redirect } from "react-router"
-import { StateStore } from "store"
+import { RootState } from "store"
 
 
 const AuthLayout: React.FC = ({ children }) => {
-    let { login } = useSelector((store: StateStore) => store.auth)
+    let { login } = useSelector((store: RootState) => store.auth)
     if (login) return <Redirect to="/account/info" />
 
     return (

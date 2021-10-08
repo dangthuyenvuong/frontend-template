@@ -6,6 +6,7 @@ import { CART_ADD_CART, CART_CLEAR_CART, CART_DECREMENT, CART_INCREMENT, CART_RE
 type CartStore = {
     openCart: boolean,
     list: { product: Product, num: number }[],
+    tax: number
 }
 
 type PayloadAction = {
@@ -16,7 +17,8 @@ type PayloadAction = {
 
 const initState: CartStore = {
     openCart: false,
-    list: JSON.parse(localStorage.getItem('cart') || '[]')
+    list: JSON.parse(localStorage.getItem('cart') || '[]'),
+    tax: 0.1,
 }
 
 

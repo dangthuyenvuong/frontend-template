@@ -18,6 +18,16 @@ export const routers: RouterParam[] = [
                 exact: true
             },
             {
+                path: '/checkout',
+                component: lazy(() => import('../pages/checkout')),
+                exact: true
+            },
+            {
+                path: '/view-cart',
+                component: lazy(() => import('../pages/view_cart')),
+                exact: true
+            },
+            {
                 path: '/product',
                 component: ProductPage,
                 exact: true

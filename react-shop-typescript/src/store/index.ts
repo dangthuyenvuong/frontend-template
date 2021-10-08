@@ -9,7 +9,7 @@ export const reducers = combineReducers({
     wishlist: wishlistReducers
 })
 
-export type StateStore = ReturnType<typeof reducers>
+export type RootState = ReturnType<typeof reducers>
 // export default StateStore
 
 // let auth = useSelector<StateStore>(store => store.auth)

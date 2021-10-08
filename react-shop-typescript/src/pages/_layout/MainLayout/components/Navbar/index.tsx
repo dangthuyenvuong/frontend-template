@@ -2,7 +2,7 @@ import { useTranslate } from 'core'
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { StateStore } from 'store'
+import { RootState } from 'store'
 import { toggleCart } from 'store/actions/cartAction'
 import { useCartNumber } from 'store/selector'
 import Blog from './components/Blog'
@@ -31,7 +31,6 @@ const Navbar: React.FC<NavbarProp> = ({ hoverEvent, mouseLeaveEvent }) => {
     return (
 
         <nav className="navbar navbar-expand-lg navbar-light bg-white">
-            {console.log('Navbar here')}
             <div className="container">
                 {/* Brand */}
                 <a className="navbar-brand" href="./overview.html">
