@@ -6,5 +6,10 @@ declare module "*.json" {
 declare global {
   interface Window {
     __REDUX_DEVTOOLS_EXTENSION_COMPOSE__? : any
+
+    $: any
   }
+
 }
+
+// declare module '*'

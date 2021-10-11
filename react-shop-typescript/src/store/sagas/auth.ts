@@ -1,19 +1,20 @@
 import { call, put, takeEvery, takeLatest } from "@redux-saga/core/effects";
-import authService from "services/authService";
+import authService, { AuthLoginResponse } from "services/authService";
 import wishlistService from "services/wishlistService";
-import { authLogin } from "store/actions/authAction";
+import { authError, authLogin } from "store/actions/authAction";
 import { GET_WISHLIST } from "store/reducers/wishlistReducers";
 import { AUTH_LOGOUT, FETCH_LOGIN } from "store/type";
 
 export function* fetchLogin(action: any): any {
     try {
-        let user = yield call(authService.login, action.payload)
+        let res: AuthLoginResponse = yield call(authService.login, action.payload)
 
-        if (user.error) {
-
-        } else {
-            localStorage.setItem('login', JSON.stringify(user))
-            yield put(authLogin(user))
+        if (res.error) {
+            yield put(authError(res.error))
+        } else if (res.data) {
+            localStorage.setItem('login', JSON.stringify(res.data))
+            localStorage.setItem('token', JSON.stringify(res.data.token))
+            yield put(authLogin(res.data))
         }
     } catch (error) {
 
@@ -36,6 +37,7 @@ function* getWishlist(): any {
 
 export function logout(): any {
     localStorage.removeItem('login')
+    localStorage.removeItem('token')
 }
 
 export function* rootAuthSaga() {

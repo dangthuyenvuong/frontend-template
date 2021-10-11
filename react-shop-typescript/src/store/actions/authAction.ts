@@ -1,11 +1,11 @@
-import { AUTH_LOGOUT, FETCH_LOGIN, LOGIN } from "store/type"
+import { User } from "@types"
+import { AUTH_ERROR, AUTH_LOGOUT, FETCH_LOGIN, LOGIN } from "store/type"
 
-
-type User = {
+type LoginRequest = {
     username: string,
     password: string
 }
-export const authFetchAction = (user: User) => {
+export const authFetchAction = (user: LoginRequest) => {
     return {
         type: FETCH_LOGIN,
         payload: user
@@ -24,5 +24,13 @@ export const authLogin = (user: User) => {
 export const authLogoutAction = () => {
     return {
         type: AUTH_LOGOUT
+    }
+}
+
+
+export const authError = (error: string) => {
+    return {
+        type: AUTH_ERROR,
+        payload: error
     }
 }

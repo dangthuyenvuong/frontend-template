@@ -1,9 +1,10 @@
 import ErrorInput from 'components/ErrorInput'
 import { useForm, useTranslate } from 'core'
 import React from 'react'
-import { useDispatch} from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { authFetchAction } from 'store/actions/authAction'
+import { useAuth } from 'store/selector'
 
 
 type Form = {
@@ -14,7 +15,8 @@ type Form = {
 const Login: React.FC = () => {
     let { t } = useTranslate()
 
-    let { register, form, handleSubmit, error } = useForm<Form>()
+    let { register, handleSubmit, error } = useForm<Form>()
+    const { error: errorRequest } = useAuth()
     const dispatch = useDispatch()
     const submit = (form: Form) => {
         dispatch(authFetchAction(form))
@@ -27,6 +29,7 @@ const Login: React.FC = () => {
                 {/* Heading */}
                 <h6 className="mb-7">Returning Customer</h6>
                 {/* Form */}
+                {errorRequest && <p className="error-request">{errorRequest}</p>}
                 <form onSubmit={handleSubmit(submit)}>
                     <div className="row">
                         <div className="col-12">

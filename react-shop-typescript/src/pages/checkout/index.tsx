@@ -31,7 +31,7 @@ const Checkout: React.FC = () => {
     const { error, form, handleSubmit, register } = useForm<Form>()
 
     const formSubmit = (form: Form) => {
-        console.log('thanh cong')
+        
     }
 
     const changeShipping = (ev: React.ChangeEvent<HTMLInputElement>) => {
