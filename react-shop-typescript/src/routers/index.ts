@@ -23,6 +23,11 @@ export const routers: RouterParam[] = [
                 exact: true
             },
             {
+                path: '/order-completed/:id',
+                component: lazy(() => import('../pages/order_completed')),
+                exact: true
+            },
+            {
                 path: '/view-cart',
                 component: lazy(() => import('../pages/view_cart')),
                 exact: true

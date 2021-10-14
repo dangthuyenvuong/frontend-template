@@ -48,41 +48,41 @@ const Navbar: React.FC<NavbarProp> = ({ hoverEvent, mouseLeaveEvent }) => {
                             {/* Toggle */}
                             <Link className="nav-link" data-toggle="dropdown" to="#" aria-expanded="true">Home</Link>
                             {/* Menu */}
-                            <div className="dropdown-menu">to
+                            {/* <div className="dropdown-menu">to
                                 <HomeCard />
-                            </div>
+                            </div> */}
                         </li>
                         <li className="nav-item dropdown position-static" onMouseOver={hoverEvent} onMouseLeave={mouseLeaveEvent}>
                             {/* Toggle */}
-                            <Link className="nav-link" data-toggle="dropdown" to="/product">{t('Product')}</Link>
+                            <Link className="nav-link" data-toggle="dropdown" to="/product" onClick={() => console.log('aaaa')}>{t('Product')}</Link>
                             {/* Menu */}
-                            <div className="dropdown-menu w-100">
+                            {/* <div className="dropdown-menu w-100">
                                 <CatalogCard />
-                            </div>
+                            </div> */}
                         </li>
                         <li className="nav-item dropdown" onMouseOver={hoverEvent} onMouseLeave={mouseLeaveEvent}>
                             {/* Toggle */}
                             <Link className="nav-link" data-toggle="dropdown" to="#">Shop</Link>
                             {/* Menu */}
-                            <div className="dropdown-menu" style={{ minWidth: '650px' }}>
+                            {/* <div className="dropdown-menu" style={{ minWidth: '650px' }}>
                                 <Shop />
-                            </div>
+                            </div> */}
                         </li>
                         <li className="nav-item dropdown hovered" onMouseOver={hoverEvent} onMouseLeave={mouseLeaveEvent}>
                             {/* Toggle */}
                             <Link className="nav-link" data-toggle="dropdown" to="#" aria-expanded="true">Pages</Link>
                             {/* Menu */}
-                            <div className="dropdown-menu">
+                            {/* <div className="dropdown-menu">
                                 <Pages />
-                            </div>
+                            </div> */}
                         </li>
                         <li className="nav-item dropdown hovered" onMouseOver={hoverEvent} onMouseLeave={mouseLeaveEvent}>
                             {/* Toggle */}
                             <Link className="nav-link" data-toggle="dropdown" to="#" aria-expanded="true">Blog</Link>
                             {/* Menu */}
-                            <div className="dropdown-menu">
+                            {/* <div className="dropdown-menu">
                                 <Blog />
-                            </div>
+                            </div> */}
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="docs/getting-started.html">Docs</a>

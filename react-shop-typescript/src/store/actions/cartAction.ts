@@ -1,5 +1,5 @@
 import { Product } from "@types";
-import { CART_ADD_CART, CART_CHECK_LOGIN, CART_DECREMENT, CART_INCREMENT, CART_REMOVE, CART_TOGGLE_CART } from "store/type";
+import { CART_ADD_CART, CART_CHECK_LOGIN, CART_CLEAR_CART, CART_DECREMENT, CART_INCREMENT, CART_REMOVE, CART_TOGGLE_CART } from "store/type";
 
 export function toggleCart(flag?: boolean) {
     return {
@@ -8,21 +8,21 @@ export function toggleCart(flag?: boolean) {
     }
 }
 
-export function addToCart(product: Product){
+export function addToCart(product: Product) {
     return {
         type: CART_CHECK_LOGIN,
         payload: product
     }
 }
 
-export function cartIncrement(id: number){
+export function cartIncrement(id: number) {
     return {
         type: CART_INCREMENT,
         payload: id
     }
 }
 
-export function cartDecrement(id: number){
+export function cartDecrement(id: number) {
     return {
         type: CART_DECREMENT,
         payload: id
@@ -30,9 +30,15 @@ export function cartDecrement(id: number){
 }
 
 
-export function cartRemove(id: number){
+export function cartRemove(id: number) {
     return {
         type: CART_REMOVE,
         payload: id
+    }
+}
+
+export function cartClear() {
+    return {
+        type: CART_CLEAR_CART,
     }
 }

@@ -1,9 +1,10 @@
 import { call, put, takeEvery, takeLatest } from "@redux-saga/core/effects";
 import authService, { AuthLoginResponse } from "services/authService";
+import cartService from "services/cartService";
 import wishlistService from "services/wishlistService";
 import { authError, authLogin } from "store/actions/authAction";
 import { GET_WISHLIST } from "store/reducers/wishlistReducers";
-import { AUTH_LOGOUT, FETCH_LOGIN } from "store/type";
+import { AUTH_LOGOUT, CART_SET_CART, FETCH_LOGIN, LOGIN } from "store/type";
 
 export function* fetchLogin(action: any): any {
     try {
@@ -35,7 +36,7 @@ function* getWishlist(): any {
 }
 
 
-export function logout(): any {
+function logout(): any {
     localStorage.removeItem('login')
     localStorage.removeItem('token')
 }

@@ -1,8 +1,10 @@
 import { ProductItem } from "components"
 import { useForm } from "core"
 import React, { useState } from "react"
-import { useSelector } from "react-redux"
-import { Redirect } from "react-router"
+import { useDispatch, useSelector } from "react-redux"
+import { Redirect, useHistory } from "react-router"
+import cartService from "services/cartService"
+import { cartClear } from "store/actions/cartAction"
 import { getSubtotal, getTaxPrice, useCart, useCartNumber, useTotal } from "store/selector"
 import { currency } from "utils"
 import { TextField } from "./components"
@@ -26,12 +28,15 @@ const Checkout: React.FC = () => {
     const cartNumber = useCartNumber()
     const [shippingPrice, setShippingPrice] = useState(35000)
     const [isDifferentAddress, setIsDifferentAddress] = useState(false)
-
+    const dispatch = useDispatch()
+    const history = useHistory()
 
     const { error, form, handleSubmit, register } = useForm<Form>()
 
-    const formSubmit = (form: Form) => {
-        
+    const formSubmit = async (form: Form) => {
+        let res = await cartService.order()
+        history.push(`/order-completed/${res.data._id}`)
+        dispatch(cartClear())
     }
 
     const changeShipping = (ev: React.ChangeEvent<HTMLInputElement>) => {

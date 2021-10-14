@@ -1,5 +1,5 @@
 import { Product } from "@types"
-import { CART_ADD_CART, CART_CLEAR_CART, CART_DECREMENT, CART_INCREMENT, CART_REMOVE, CART_TOGGLE_CART } from "store/type"
+import { CART_ADD_CART, CART_CLEAR_CART, CART_DECREMENT, CART_INCREMENT, CART_REMOVE, CART_SET_CART, CART_TOGGLE_CART } from "store/type"
 
 
 
@@ -100,6 +100,11 @@ const cartReducer = (state = initState, action: PayloadAction): CartStore => {
             return {
                 ...state,
                 list: []
+            }
+        case CART_SET_CART:
+            return {
+                ...state,
+                list: action.payload
             }
 
     }
