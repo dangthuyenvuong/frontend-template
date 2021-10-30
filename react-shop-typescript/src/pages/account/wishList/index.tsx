@@ -1,39 +1,58 @@
+import { IPaginate, Product } from '@types'
+import { ProductCard } from 'components'
+import LoadingPage from 'components/LoadingPage'
 import { Pagination } from 'components/Pagination'
-import React, { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { RootState } from 'store'
-import { wishlistAction } from 'store/actions/wishlistAction'
-import { convertQueryURLToObject } from 'utils'
+import React, { useEffect, useState } from 'react'
+import wishlistService from 'services/wishlistService'
+import { convertObjectToQueryURL, convertQueryURLToObject } from 'utils'
+
+
+type StateProp = {
+  loading: boolean,
+  products: Product[],
+  paginate?: IPaginate
+}
 
 
 
 const Wishlist: React.FC = () => {
+  const [state, setState] = useState<StateProp>({
+    loading: false,
+    products: []
+  })
   let queryURLObject = convertQueryURLToObject<{ page: string }>()
 
-  let dispatch = useDispatch()
 
   useEffect(() => {
-    console.log('queryURLObject page: ' + queryURLObject.page)
-    try {
-      dispatch(wishlistAction)
-    } catch (err) { }
+    (async () => {
+      let queryUrl = convertObjectToQueryURL({page: queryURLObject.page || 1})
+      const productList = await wishlistService.getWishlist(`?${queryUrl}`)
+      setState({
+        loading: false,
+        products: productList.data,
+        paginate: productList.paginate
+      })
+    })()
+
   }, [queryURLObject.page])
 
-  let wishlist = useSelector((store: RootState) => store.wishlist)
-  console.log('wishlist: ' + wishlist)
 
-  // let wishlist = []
+  let {loading, products, paginate} = state
 
+  if(loading) return <LoadingPage />
 
   return (
     <div>
       <div className="row">
         {/* Item */}
-        
-
+        {
+          products.map(e => <ProductCard key={e.id} product={e}/>)
+        }
       </div>
       {/* Pagination */}
-      <Pagination currentPage={parseInt(queryURLObject?.page || '0')} totalPage={11} />
+      {
+        paginate && <Pagination {...paginate} />
+      }
     </div>
   )
 }

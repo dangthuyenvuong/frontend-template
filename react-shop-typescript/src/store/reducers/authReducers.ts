@@ -1,19 +1,22 @@
+import { User } from "@types";
 import { AUTH_ERROR, AUTH_LOGOUT, LOGIN } from "store/type"
 
 
 
 type AuthStoreState = {
-    user?: {
-        name: string,
-        avatar: string
-    },
+    user?: User,
     login: boolean,
-    error?: string
+    error?: string,
+    permission: string[],
+    role: string
 }
 
 type PayloadAction = {
     type: string,
-    payload: AuthStoreState['user'] | string
+    payload: AuthStoreState['user'] | {
+        user: AuthStoreState['user'],
+        permission: string[]
+    } | string
 }
 
 let user: AuthStoreState['user'];
@@ -28,13 +31,14 @@ try {
 const initState: AuthStoreState = {
     user,
     login: !!user,
-    
+    permission: ['product:view', 'product:create'],
+    role: 'editor'
 }
 
 
 
 
-const authReducer = (state = initState, action: PayloadAction) : AuthStoreState => {
+const authReducer = (state = initState, action: any): AuthStoreState => {
     switch (action.type) {
         case LOGIN:
             return {

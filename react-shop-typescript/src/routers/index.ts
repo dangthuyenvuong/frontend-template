@@ -35,7 +35,11 @@ export const routers: RouterParam[] = [
             {
                 path: '/product',
                 component: ProductPage,
-                exact: true
+                exact: true,
+                // auth: true,
+                // auth: 'product:view'
+                auth: 'editor',
+
             },
             {
                 path: '/auth',

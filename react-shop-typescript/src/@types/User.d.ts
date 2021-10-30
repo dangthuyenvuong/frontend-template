@@ -8,5 +8,7 @@ export interface User{
     first_name?: string
     last_name?: string
     gender?: string
-    birthday?: string
+    birthday?: string,
+    permission: string[],
+    role: string
 }

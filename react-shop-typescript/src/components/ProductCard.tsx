@@ -3,11 +3,16 @@ import { Product } from '@types'
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
+import wishlistService from 'services/wishlistService'
 import { addToCart } from 'store/actions/cartAction'
 
 export const ProductCard: React.FC<{ product?: Product }> = ({ product }) => {
     const dispatch = useDispatch()
-
+    const addWishlist = () => {
+        if(product){
+            wishlistService.addWishlist(product.id)
+        }
+    }
 
 
     return (
@@ -46,7 +51,7 @@ export const ProductCard: React.FC<{ product?: Product }> = ({ product }) => {
 
                                 </span>
                                 <span className="card-action">
-                                    <button className="btn btn-xs btn-circle btn-white-primary" data-toggle="button">
+                                    <button onClick={addWishlist} className="btn btn-xs btn-circle btn-white-primary" data-toggle="button">
                                         <i className="fe fe-heart" />
                                     </button>
                                 </span>

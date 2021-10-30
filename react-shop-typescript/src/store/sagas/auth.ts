@@ -15,24 +15,12 @@ export function* fetchLogin(action: any): any {
         } else if (res.data) {
             localStorage.setItem('login', JSON.stringify(res.data))
             localStorage.setItem('token', JSON.stringify(res.data.token))
+
             yield put(authLogin(res.data))
         }
     } catch (error) {
 
     }
-}
-
-
-function* getWishlist(): any {
-    try {
-        let res = yield call(wishlistService.getwishlist1)
-        //    console.log('res: ' + res)
-        if (res.error) {
-
-        } else {
-            yield put({ type: GET_WISHLIST })
-        }
-    } catch (err) { }
 }
 
 
@@ -42,7 +30,6 @@ function logout(): any {
 }
 
 export function* rootAuthSaga() {
-    yield takeLatest(GET_WISHLIST, getWishlist)
     yield takeLatest(FETCH_LOGIN, fetchLogin)
     yield takeLatest(AUTH_LOGOUT, logout)
 }

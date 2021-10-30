@@ -1,23 +1,15 @@
-const wishlistService = {
-    getWishlist() {
-        try {
-            fetch('/fakeData')
-        } catch (err) {}
-        return new Promise((res, reject) => {
-            
-        })
-    },
+import { PaginateData, Product } from "@types"
+import { http } from "core"
 
-    async getwishlist1() {
-        console.log('bbbbbbbbbbbbbbbbbbbbbbb')
-        return fetch('/fakeData/wishlistData.json').then(
-            res => {
-                if(res.status === 200) {
-                    console.log('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
-                    return res.json();
-                }
-            }
-        )
+let domain = process.env.REACT_APP_API || ''
+
+const wishlistService = {
+    getWishlist(queryString?: string) {
+        return http.token().get<PaginateData<Product>>(`${domain}/ecommerce/v1/profile/wishlist${queryString ?? ''}`)
+    },
+    addWishlist(id: number) {
+        return http.token().post(`${domain}/ecommerce/v1/profile/wishlist`, { product_id: id })
+
     }
 }
 
