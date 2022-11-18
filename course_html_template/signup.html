@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Spacedev</title>
+    <title>Grunt</title>
     <link rel="icon" href="https://www.vivosmartphone.vn/themes/vivo/favicon.ico">
     <meta name="title" content="" />
     <meta name="description" content="" />
@@ -19,7 +19,6 @@
 
     <link rel="stylesheet" href="dest/style.min.css">
     <link rel="stylesheet" href="dest/fonts.css">
-    <link rel="stylesheet" href="dest/stylelibs.min.css">
 </head>
 
 <body>
@@ -65,7 +64,8 @@
     <nav class="nav">
         <ul>
             <li class="li_login">
-                <a href="#">Đăng ký / Đăng nhập</a>
+                <a href="#">Đăng nhập</a>
+                <a href="#">Đăng ký</a>
             </li>
             <li class="active">
                 <a href="./">Trang chủ</a>
@@ -85,13 +85,17 @@
         </ul>
     </nav>
     <div class="overlay_nav"></div>
-    <main class="notfound" id="main">
-        <div class="container">
-            <section>
-                <h2 class="main-title">404</h2>
-                <p>Không tìm thấy trang</p>
-                <a href="#" class="btn main round">Trang chủ</a>
-            </section>
+    <main class="auth" id="main">
+        <div class="wrap">
+            <h2 class="title">Đăng ký</h2>
+            <input type="text" placeholder="Địa chỉ Email">
+            <input placeholder="Họ và tên">
+            <input type="password" placeholder="Mật khẩu">
+            <input type="password" placeholder="Nhập lại mật khẩu">
+            <p class="policy">
+                Bằng việc đăng kí, bạn đã đồng ý <a href="#">Điều khoản bảo mật</a> của Spacedev
+            </p>
+            <button class="btn rect main btn-login">Đăng ký</button>
         </div>
     </main>
     <footer id="footer">
@@ -104,14 +108,14 @@
                     </p>
                     <p class="phone">(+84) 949 816 596</p>
                     <div class="social">
-                        <a href="#">
-                            <img src="img/fb-icon.png" alt="">
+                        <a class="fb" href="#">
+                            <!-- <img src="img/icon-fb.svg" alt=""> -->
                         </a>
-                        <a href="#">
-                            <img src="img/email-icon.png" alt="">
+                        <a class="gmail" href="#">
+                            <!-- <img src="img/icon-gmail.svg" alt=""> -->
                         </a>
-                        <a href="#">
-                            <img src="img/skype-icon.png" alt="">
+                        <a class="skype" href="#">
+                            <!-- <img src="img/icon-skype.svg" alt=""> -->
                         </a>
                     </div>
                 </div>
@@ -153,64 +157,7 @@
         </div>
         <div class="close"></div>
     </div>
-    <div class="popup-form popup-login" style="display: none;">
-        <div class="wrap">
-            <!-- login-form -->
-            <div class="ct_login" style="display:block">
-                <h2 class="title">Đăng nhập</h2>
-                <input type="text" placeholder="Email / Số điện thoại">
-                <input type="password" placeholder="Mật khẩu">
-                <div class="remember">
-                    <label class="btn-remember">
-                        <div>
-                            <input type="checkbox">
-                        </div>
-                        <p>Nhớ mật khẩu</p>
-                    </label>
-                    <a href="#" class="forget">Quên mật khẩu?</a>
-                </div>
-                <div class="btn rect main btn-login">đăng nhập</div>
-                <div class="text-register" style="">
-                    <strong>hoặc đăng ký bằng</strong>
-                </div>
-                <div>
-                    <div class="btn btn-icon rect white btn-google">
-                        <img src="img/google.svg" alt="">
-                        Google
-                    </div>
-                </div>
-                <div class="close">
-                    <img src="img/close-icon.png" alt="">
 
-                </div>
-            </div>
-            <!-- email form -->
-            <div class="ct_email">
-                <h2 class="title">Đặt lại mật khẩu</h2>
-                <input type="text" placeholder="Email">
-                <div class="btn rect main btn-next">Tiếp theo</div>
-                <div class="back"></div>
-                <div class="close">
-                    <img src="img/close-icon.png" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="popup-form popup-login" style="display: none;">
-        <div class="wrap">
-            <h2 class="title">Đăng ký</h2>
-            <div class="btn btn-icon rect white btn-google">
-                <img src="img/google.svg" alt="">
-                Google
-            </div>
-            <p class="policy">
-                Bằng việc đăng kí, bạn đã đồng ý <a href="#">Điều khoản bảo mật</a> của Spacedev
-            </p>
-            <div class="close">
-                <img src="img/close-icon.png" alt="">
-            </div>
-        </div>
-    </div>
     <script src="dest/jsmain.min.js"></script>
     <script src="js/main.js"></script>
 </body>
