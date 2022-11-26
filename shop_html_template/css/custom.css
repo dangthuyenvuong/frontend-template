@@ -1,0 +1,57 @@
+.navbar-light .navbar-nav .nav-link {
+    font-weight: 600;
+}
+
+.card-sale {
+    background: red;
+    border-top-left-radius: 0;
+    border: 12px solid transparent;
+    border-color: transparent transparent transparent #ffffff;
+    height: 0;
+    line-height: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.card-product-rating {
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+}
+
+.card-product-rating svg {
+    height: 17px;
+    width: 17px;
+}
+
+.card-product-price {
+    font-weight: bold;
+}
+
+.card-product-price .sale {
+    font-size: 1.5rem;
+}
+
+.card-product-name {
+    font-weight: 600;
+}
+
+.text-small {
+    font-size: 0.875rem;
+}
+
+.list-group-strong .list-group-item.active {
+    font-weight: bold;
+}
+
+.promotion-code-card {
+    border: 1px solid #e5e5e5;
+    padding: 1.5rem;
+    position: relative;
+}
+
+.promotion-code-card .close {
+    cursor: pointer;
+}
+
+.promotion-code-card .code {}
