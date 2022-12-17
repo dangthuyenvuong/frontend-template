@@ -64,8 +64,10 @@
     <nav class="nav">
         <ul>
             <li>
-                <a href="#">Đăng nhập</a>
-                <a href="#">Đăng ký</a>
+                <a href="./signin.html">Đăng ký / Đăng nhập</a>
+            </li>
+            <li>
+                <a href="./profile.html">Tài khoản</a>
             </li>
             <li>
                 <a class="active" href="./">Trang chủ</a>
@@ -85,28 +87,31 @@
         </ul>
     </nav>
     <div class="overlay_nav"></div>
-    <main class="auth" id="main">
-        <div class="wrap">
-            <!-- login-form -->
-            <div class="ct_login">
-                <h2 class="title">Đăng nhập</h2>
-                <input type="text" placeholder="Email / Số điện thoại">
-                <input type="password" placeholder="Mật khẩu">
-                <div class="remember">
-                    <label class="btn-remember">
-                        <div>
-                            <input type="checkbox">
-                        </div>
-                        <p>Nhớ mật khẩu</p>
-                    </label>
-                    <a href="#" class="forget">Quên mật khẩu?</a>
-                </div>
-                <button class="btn rect main btn-login">đăng nhập</button>
-                <div class="text-register" style="">
-                    <span>Nếu bạn chưa có tài khoản?</span> <a class="link" href="#">Đăng ký</a>
+    <main id="main">
+        <div class="auth">
+            <div class="wrap">
+                <!-- login-form -->
+                <div class="ct_login">
+                    <h2 class="title">Đăng nhập</h2>
+                    <input type="text" placeholder="Email / Số điện thoại">
+                    <input type="password" placeholder="Mật khẩu">
+                    <div class="remember">
+                        <label class="btn-remember">
+                            <div>
+                                <input type="checkbox">
+                            </div>
+                            <p>Nhớ mật khẩu</p>
+                        </label>
+                        <a href="./reset-password.html" class="forget">Quên mật khẩu?</a>
+                    </div>
+                    <button class="btn rect main btn-login">đăng nhập</button>
+                    <div class="text-register">
+                        <span>Nếu bạn chưa có tài khoản?</span> <a class="link" href="./signup.html">Đăng ký</a>
+                    </div>
                 </div>
             </div>
         </div>
+
     </main>
     <footer id="footer">
         <div class="container">

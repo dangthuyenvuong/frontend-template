@@ -64,7 +64,10 @@
     <nav class="nav">
         <ul>
             <li>
-                <a href="#">Đăng ký / Đăng nhập</a>
+                <a href="./signin.html">Đăng ký / Đăng nhập</a>
+            </li>
+            <li>
+                <a href="./profile.html">Tài khoản</a>
             </li>
             <li>
                 <a class="active" href="./">Trang chủ</a>
@@ -84,277 +87,280 @@
         </ul>
     </nav>
     <div class="overlay_nav"></div>
-    <main class="profile" id="main">
-        <section>
-            <div class="top-info">
-                <div class="avatar">
-                    <!-- <span class="text">H</span> -->
-                    <img src="img/avt.png" alt="">
-                    <div class="camera"></div>
-                </div>
-                <div class="name">Vương Đặng</div>
-                <p class="des">Thành viên của team Spacedev1-OFFLINE</p>
-            </div>
-            <div class="container">
-                <div class="tab">
-                    <div class="tab-title">
-                        <a href="#" class="active">Thông tin tài khoản</a>
-                        <a href="#">Khóa học của bạn</a>
-                        <a href="#">Dự án đã làm</a>
-                        <a href="#">Lịch sử thanh toán</a>
-                        <a href="#">Quản lý COIN của tôi</a>
+    <main id="main">
+        <div class="profile">
+            <section>
+                <div class="top-info">
+                    <div class="avatar">
+                        <!-- <span class="text">H</span> -->
+                        <img src="img/avt.png" alt="">
+                        <div class="camera"></div>
                     </div>
-                    <div class="tab-content">
-                        <div class="tab1" style="display: none;">
-                            <label>
-                                <p>Họ và tên<span>*</span></p>
-                                <input type="text" placeholder="Nguyễn Văn A">
-                            </label>
-                            <label>
-                                <p>Số điện thoại<span>*</span></p>
-                                <input type="text" placeholder="0949******">
-                            </label>
-                            <label>
-                                <p>Email<span>*</span></p>
-                                <input value="dangthuyenvuong@gmail.com" disabled type="text">
-                            </label>
-                            <label>
-                                <p>Facebook<span>*</span></p>
-                                <input type="text" placeholder="Facebook url">
-                            </label>
-                            <label>
-                                <p>Skype<span>*</span></p>
-                                <input type="text" placeholder="Skype url">
-                            </label>
-                            <div class="btn main rect">LƯU LẠI</div>
+                    <div class="name">Vương Đặng</div>
+                    <p class="des">Thành viên của team Spacedev1-OFFLINE</p>
+                </div>
+                <div class="container">
+                    <div class="tab">
+                        <div class="tab-title">
+                            <a href="#" class="active">Thông tin tài khoản</a>
+                            <a href="#">Khóa học của bạn</a>
+                            <a href="#">Dự án đã làm</a>
+                            <a href="#">Lịch sử thanh toán</a>
+                            <a href="#">Quản lý COIN của tôi</a>
                         </div>
-                        <div class="tab2" style="display: none;">
-                            <div class="item">
-                                <div class="cover">
-                                    <img src="./img/img3.png" alt="">
-                                </div>
-                                <div class="info">
-                                    <a href="#" class="name">
-                                        Reactjs Advanced
-                                    </a>
-                                    <div class="date">Khai giảng ngày 09/09/2019</div>
-                                    <div class="row">
-                                        <div>
-                                            <img src="img/clock.svg" alt="" class="icon">54 giờ
-                                        </div>
-                                        <div>
-                                            <img src="img/play.svg" alt="" class="icon">25 video
-                                        </div>
-                                        <div>
-                                            <img src="img/user.svg" alt="" class="icon">20 học viên
-                                        </div>
-                                    </div>
-                                    <div class="process">
-                                        <div class="line">
-                                            <div class="rate" style="width: 30%"></div>
-                                        </div>
-                                        30%
-                                    </div>
-                                    <div class="btn overlay round btn-continue">
-                                        Tiếp tục học
-                                    </div>
-                                </div>
+                        <div class="tab-content">
+                            <div class="tab1" style="display: none;">
+                                <label>
+                                    <p>Họ và tên<span>*</span></p>
+                                    <input type="text" placeholder="Nguyễn Văn A">
+                                </label>
+                                <label>
+                                    <p>Số điện thoại<span>*</span></p>
+                                    <input type="text" placeholder="0949******">
+                                </label>
+                                <label>
+                                    <p>Email<span>*</span></p>
+                                    <input value="dangthuyenvuong@gmail.com" disabled type="text">
+                                </label>
+                                <label>
+                                    <p>Facebook<span>*</span></p>
+                                    <input type="text" placeholder="Facebook url">
+                                </label>
+                                <label>
+                                    <p>Skype<span>*</span></p>
+                                    <input type="text" placeholder="Skype url">
+                                </label>
+                                <div class="btn main rect">LƯU LẠI</div>
                             </div>
-                            <div class="item">
-                                <div class="cover">
-                                    <img src="./img/img7.png" alt="">
-                                </div>
-                                <div class="info">
-                                    <a href="#" class="name">
-                                        Nodejs Advanced
-                                    </a>
-                                    <div class="date">Khai giảng ngày 09/09/2019</div>
-                                    <div class="row">
-                                        <div>
-                                            <img src="img/clock.svg" alt="" class="icon">54 giờ
-                                        </div>
-                                        <div>
-                                            <img src="img/play.svg" alt="" class="icon">25 video
-                                        </div>
-                                        <div>
-                                            <img src="img/user.svg" alt="" class="icon">20 học viên
-                                        </div>
+                            <div class="tab2" style="display: none;">
+                                <div class="item">
+                                    <div class="cover">
+                                        <img src="./img/img3.png" alt="">
                                     </div>
-                                    <div class="process">
-                                        <div class="line">
-                                            <div class="rate" style="width: 30%"></div>
-                                        </div>
-                                        30%
-                                    </div>
-                                    <div class="btn overlay round btn-continue">
-                                        Tiếp tục học
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab3" style="display: none;">
-                            <div class="row">
-                                <div class="col-md-6 course">
-                                    <div class="wrap">
-                                        <a href="#" class="cover">
-                                            <img src="./img/img8.png" alt="">
+                                    <div class="info">
+                                        <a href="#" class="name">
+                                            Reactjs Advanced
                                         </a>
-                                        <div class="info">
-                                            <a href="#" class="name">
-                                                Reactjs
-                                            </a>
-                                            <p class="des">
-                                                Dự án hoàn thành trong khóa Spacedev1 Offline của Spacedev Team.
-                                            </p>
-                                        </div>
-                                        <div class="bottom">
-                                            <div class="teacher">
-                                                <div class="avatar">
-                                                    <img src="img/avt.png" alt="">
-                                                </div>
-                                                <div class="name">Vương Đặng</div>
+                                        <div class="date">Khai giảng ngày 09/09/2019</div>
+                                        <div class="row">
+                                            <div>
+                                                <img src="img/clock.svg" alt="" class="icon">54 giờ
                                             </div>
-                                            <div class="register-btn">Website</div>
+                                            <div>
+                                                <img src="img/play.svg" alt="" class="icon">25 video
+                                            </div>
+                                            <div>
+                                                <img src="img/user.svg" alt="" class="icon">20 học viên
+                                            </div>
+                                        </div>
+                                        <div class="process">
+                                            <div class="line">
+                                                <div class="rate" style="width: 30%"></div>
+                                            </div>
+                                            30%
+                                        </div>
+                                        <div class="btn overlay round btn-continue">
+                                            Tiếp tục học
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6 course">
-                                    <div class="wrap">
-                                        <a href="#" class="cover">
-                                            <img src="./img/img8.png" alt="">
+                                <div class="item">
+                                    <div class="cover">
+                                        <img src="./img/img7.png" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <a href="#" class="name">
+                                            Nodejs Advanced
                                         </a>
-                                        <div class="info">
-                                            <a href="#" class="name">
-                                                Shopper
-                                            </a>
-                                            <p class="des">
-                                                Dự án hoàn thành trong khóa Spacedev1 Offline của Spacedev Team.
-                                            </p>
-                                        </div>
-                                        <div class="bottom">
-                                            <div class="teacher">
-                                                <div class="avatar">
-                                                    <img src="img/avt.png" alt="">
-                                                </div>
-                                                <div class="name">Vương Đặng</div>
+                                        <div class="date">Khai giảng ngày 09/09/2019</div>
+                                        <div class="row">
+                                            <div>
+                                                <img src="img/clock.svg" alt="" class="icon">54 giờ
                                             </div>
-                                            <div class="register-btn">Website</div>
+                                            <div>
+                                                <img src="img/play.svg" alt="" class="icon">25 video
+                                            </div>
+                                            <div>
+                                                <img src="img/user.svg" alt="" class="icon">20 học viên
+                                            </div>
+                                        </div>
+                                        <div class="process">
+                                            <div class="line">
+                                                <div class="rate" style="width: 30%"></div>
+                                            </div>
+                                            30%
+                                        </div>
+                                        <div class="btn overlay round btn-continue">
+                                            Tiếp tục học
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="btn-wrap">
-                                <div class="btn overlay btn-icon round">
-                                    <img src="img/icon-upload.svg" alt="" style="margin-right: 10px;"> Tải lên
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab4" style="display: none;">
-                            <div class="item itemhistory">
-                                <div class="name">Khóa học Spacedev1-offline</div>
-                                <div class="date">09/09/2020</div>
-                                <div class="money">1.500.000 VND</div>
-                            </div>
-                            <div class="item itemhistory">
-                                <div class="name">Khóa học Spacedev1-offline</div>
-                                <div class="date">18/10/2020</div>
-                                <div class="money">1.500.000 VND</div>
-                            </div>
-                            <div class="item itemhistory">
-                                <div class="name">Khóa học Spacedev1-offline</div>
-                                <div class="date">18/10/2020</div>
-                                <div class="money">1.500.000 VND</div>
-                            </div>
-                            <div class="item itemhistory">
-                                <div class="name">Khóa học Spacedev1-offline</div>
-                                <div class="date">18/10/2020</div>
-                                <div class="money">1.500.000 VND</div>
-                            </div>
-                        </div>
-                        <div class="tab5 cointab" style="display: block;">
-                            <div class="coininfo">
-                                <div class="coininfo__box">
-                                    <h3><strong>Thông tin COIN</strong></h3>
-                                    <div class="coininfo__box-ct">
-                                        <div>
-                                            <img src="img/Spacedev-coin.png" alt="">
-                                            <p>Bạn có <strong>300</strong> COIN</p>
+                            <div class="tab3" style="display: none;">
+                                <div class="row">
+                                    <div class="col-md-6 course">
+                                        <div class="wrap">
+                                            <a href="#" class="cover">
+                                                <img src="./img/img8.png" alt="">
+                                            </a>
+                                            <div class="info">
+                                                <a href="#" class="name">
+                                                    Reactjs
+                                                </a>
+                                                <p class="des">
+                                                    Dự án hoàn thành trong khóa Spacedev1 Offline của Spacedev Team.
+                                                </p>
+                                            </div>
+                                            <div class="bottom">
+                                                <div class="teacher">
+                                                    <div class="avatar">
+                                                        <img src="img/avt.png" alt="">
+                                                    </div>
+                                                    <div class="name">Vương Đặng</div>
+                                                </div>
+                                                <div class="register-btn">Website</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 course">
+                                        <div class="wrap">
+                                            <a href="#" class="cover">
+                                                <img src="./img/img8.png" alt="">
+                                            </a>
+                                            <div class="info">
+                                                <a href="#" class="name">
+                                                    Shopper
+                                                </a>
+                                                <p class="des">
+                                                    Dự án hoàn thành trong khóa Spacedev1 Offline của Spacedev Team.
+                                                </p>
+                                            </div>
+                                            <div class="bottom">
+                                                <div class="teacher">
+                                                    <div class="avatar">
+                                                        <img src="img/avt.png" alt="">
+                                                    </div>
+                                                    <div class="name">Vương Đặng</div>
+                                                </div>
+                                                <div class="register-btn">Website</div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="coininfo__box">
-                                    <h3><strong>Đổi COIN</strong></h3>
-                                    <div class="coininfo__box-ct">
-                                        <label class="checkcontainer">
-                                            Voucher Tiki 100k
-                                            <input type="radio" name="radio">
-                                            <span class="checkmarkradio"></span>
-                                        </label>
-                                        <label class="checkcontainer">
-                                            Voucher Tiki 200k
-                                            <input type="radio" name="radio">
-                                            <span class="checkmarkradio"></span>
-                                        </label>
-                                        <label class="checkcontainer">
-                                            Voucher Tiki 500k
-                                            <input type="radio" name="radio">
-                                            <span class="checkmarkradio"></span>
-                                        </label>
-                                        <label class="checkcontainer">
-                                            Thẻ nạp điện thoại 100k
-                                            <input type="radio" name="radio">
-                                            <span class="checkmarkradio"></span>
-                                        </label>
-                                        <label class="checkcontainer">
-                                            Thẻ nạp điện thoại 200k
-                                            <input type="radio" name="radio">
-                                            <span class="checkmarkradio"></span>
-                                        </label>
-                                        <label class="checkcontainer">
-                                            Thẻ nạp điện thoại 500k
-                                            <input type="radio" name="radio">
-                                            <span class="checkmarkradio"></span>
-                                        </label>
-                                        <small><i>*Bạn có thể đổi COIN 1 lần</i></small>
+                                <div class="btn-wrap">
+                                    <div class="btn overlay btn-icon round">
+                                        <img src="img/icon-upload.svg" alt="" style="margin-right: 10px;"> Tải lên
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab4" style="display: none;">
+                                <div class="item itemhistory">
+                                    <div class="name">Khóa học Spacedev1-offline</div>
+                                    <div class="date">09/09/2020</div>
+                                    <div class="money">1.500.000 VND</div>
+                                </div>
+                                <div class="item itemhistory">
+                                    <div class="name">Khóa học Spacedev1-offline</div>
+                                    <div class="date">18/10/2020</div>
+                                    <div class="money">1.500.000 VND</div>
+                                </div>
+                                <div class="item itemhistory">
+                                    <div class="name">Khóa học Spacedev1-offline</div>
+                                    <div class="date">18/10/2020</div>
+                                    <div class="money">1.500.000 VND</div>
+                                </div>
+                                <div class="item itemhistory">
+                                    <div class="name">Khóa học Spacedev1-offline</div>
+                                    <div class="date">18/10/2020</div>
+                                    <div class="money">1.500.000 VND</div>
+                                </div>
+                            </div>
+                            <div class="tab5 cointab" style="display: block;">
+                                <div class="coininfo">
+                                    <div class="coininfo__box">
+                                        <h3><strong>Thông tin COIN</strong></h3>
+                                        <div class="coininfo__box-ct">
+                                            <div>
+                                                <img src="img/Spacedev-coin.png" alt="">
+                                                <p>Bạn có <strong>300</strong> COIN</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="coininfo__box">
+                                        <h3><strong>Đổi COIN</strong></h3>
+                                        <div class="coininfo__box-ct">
+                                            <label class="checkcontainer">
+                                                Voucher Tiki 100k
+                                                <input type="radio" name="radio">
+                                                <span class="checkmarkradio"></span>
+                                            </label>
+                                            <label class="checkcontainer">
+                                                Voucher Tiki 200k
+                                                <input type="radio" name="radio">
+                                                <span class="checkmarkradio"></span>
+                                            </label>
+                                            <label class="checkcontainer">
+                                                Voucher Tiki 500k
+                                                <input type="radio" name="radio">
+                                                <span class="checkmarkradio"></span>
+                                            </label>
+                                            <label class="checkcontainer">
+                                                Thẻ nạp điện thoại 100k
+                                                <input type="radio" name="radio">
+                                                <span class="checkmarkradio"></span>
+                                            </label>
+                                            <label class="checkcontainer">
+                                                Thẻ nạp điện thoại 200k
+                                                <input type="radio" name="radio">
+                                                <span class="checkmarkradio"></span>
+                                            </label>
+                                            <label class="checkcontainer">
+                                                Thẻ nạp điện thoại 500k
+                                                <input type="radio" name="radio">
+                                                <span class="checkmarkradio"></span>
+                                            </label>
+                                            <small><i>*Bạn có thể đổi COIN 1 lần</i></small>
+
+                                        </div>
+                                        <a href="javascript:void(0)" class="btn main">Đổi COIN</a>
 
                                     </div>
-                                    <a href="javascript:void(0)" class="btn main">Đổi COIN</a>
-
                                 </div>
-                            </div>
-                            <div class="coinhistory">
-                                <h3><strong>Lịch sử COIN</strong></h3>
-                                <!-- <p>Chưa sử dụng COIN</p> -->
-                                <div class="itemhistory">
-                                    <div class="td"><strong>COIN</strong></div>
-                                    <div class="td"><strong>Thời gian</strong></div>
-                                    <div class="td"><strong>Nội dung</strong></div>
-                                    <div class="td"><strong>Trạng thái</strong></div>
-                                </div>
-                                <div class="itemhistory">
-                                    <div class="td"><span class="coin red">-300</span></div>
-                                    <div class="td">09/09/2020</div>
-                                    <div class="td">Giới thiệu khóa học cho học viên mới</div>
-                                    <div class="td">Đã chấp nhận</div>
-                                </div>
-                                <div class="itemhistory">
-                                    <div class="td"><span class="coin">+300</span></div>
-                                    <div class="td">18/10/2020</div>
-                                    <div class="td">Dùng COIN để quy đổi sang Voucher Tiki</div>
-                                    <div class="td">Đã chấp nhận</div>
-                                </div>
-                                <div class="itemhistory">
-                                    <div class="td"><span class="coin red">-300</span></div>
-                                    <div class="td">18/10/2020</div>
-                                    <div class="td">Dùng COIN để đổi sang Thẻ nạp điện thoại</div>
-                                    <div class="td">Chờ duyệt</div>
+                                <div class="coinhistory">
+                                    <h3><strong>Lịch sử COIN</strong></h3>
+                                    <!-- <p>Chưa sử dụng COIN</p> -->
+                                    <div class="itemhistory">
+                                        <div class="td"><strong>COIN</strong></div>
+                                        <div class="td"><strong>Thời gian</strong></div>
+                                        <div class="td"><strong>Nội dung</strong></div>
+                                        <div class="td"><strong>Trạng thái</strong></div>
+                                    </div>
+                                    <div class="itemhistory">
+                                        <div class="td"><span class="coin red">-300</span></div>
+                                        <div class="td">09/09/2020</div>
+                                        <div class="td">Giới thiệu khóa học cho học viên mới</div>
+                                        <div class="td">Đã chấp nhận</div>
+                                    </div>
+                                    <div class="itemhistory">
+                                        <div class="td"><span class="coin">+300</span></div>
+                                        <div class="td">18/10/2020</div>
+                                        <div class="td">Dùng COIN để quy đổi sang Voucher Tiki</div>
+                                        <div class="td">Đã chấp nhận</div>
+                                    </div>
+                                    <div class="itemhistory">
+                                        <div class="td"><span class="coin red">-300</span></div>
+                                        <div class="td">18/10/2020</div>
+                                        <div class="td">Dùng COIN để đổi sang Thẻ nạp điện thoại</div>
+                                        <div class="td">Chờ duyệt</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
+
     </main>
     <footer id="footer">
         <div class="container">
