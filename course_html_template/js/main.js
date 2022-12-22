@@ -202,7 +202,6 @@ $(document).ready(function () {
         }, 500)
         ev.preventDefault()
     })
-    console.log($('a'));
     homePage();
     profilePage();
     coursePage();

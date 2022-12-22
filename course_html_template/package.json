@@ -4,7 +4,8 @@
   "description": "This is grunt template project for training",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tailwind": "npx tailwindcss -i ./scss/tailwind.css -o ./dest/tailwind.css --watch" 
   },
   "keywords": [
     "task"
