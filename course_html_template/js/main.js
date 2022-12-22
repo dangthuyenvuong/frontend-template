@@ -14,9 +14,23 @@ function isDesktop() {
     }
 }
 
+$('.slider').flickity({
+    contain: true,
+    wrapAround: false,
+    autoPlay: true,
+    // freeScroll: true,
+    cellAlign: 'left',
+    prevNextButtons: false,
+
+})
+
+
 
 function homePage() {
-    if ($('#main.homepage').length === 0) return;
+    if ($('#main .homepage').length === 0) return;
+
+
+
 
     function teamSlider() {
         let $carouselGallery = $(".homepage .section-gallery .list"),
@@ -165,7 +179,7 @@ courseDetailAccordion();
 
 
 function coursePage() {
-    if ($('#main.course-detail').length === 0) return;
+    if ($('#main .course-detail').length === 0) return;
     $('.banner .video').on('click', function () {
         $('html').animate({
             scrollTop: $('.course-detail .section-2').offset().top - 60
@@ -177,6 +191,18 @@ function coursePage() {
 
 $(document).ready(function () {
 
+    $('a').on('click', function (ev) {
+        $('#header .progress').addClass('active')
+        setTimeout(() => {
+            window.location = ev.currentTarget.href
+            $('#header .progress').css({ display: 'none' }).removeClass('active')
+            setTimeout(() => {
+                $('#header .progress').css({ display: 'block' })
+            }, 100)
+        }, 500)
+        ev.preventDefault()
+    })
+    console.log($('a'));
     homePage();
     profilePage();
     coursePage();

@@ -17,6 +17,7 @@
     <meta property="og:site_name" content="" />
     <meta property="og:image" content="" />
 
+    <link rel="stylesheet" href="dest/tailwind.css">
     <link rel="stylesheet" href="dest/style.min.css">
     <link rel="stylesheet" href="dest/fonts.css">
     <link rel="stylesheet" href="dest/stylelibs.min.css">
@@ -61,6 +62,7 @@
                 </div> -->
             </div>
         </div>
+        <div class="progress"></div>
     </header>
     <nav class="nav">
         <ul>
@@ -68,7 +70,12 @@
                 <a href="./signin.html">Đăng ký / Đăng nhập</a>
             </li>
             <li>
-                <a href="./profile.html">Tài khoản</a>
+                <a href="./profile.html" class="account">
+                    <div class="avatar">
+                        <img src="img/avt.png" alt="">
+                    </div>
+                    <div class="name">Đặng Thuyền Vương</div>
+                </a>
             </li>
             <li>
                 <a class="active" href="./">Trang chủ</a>
@@ -93,11 +100,28 @@
             <div class="container">
                 <h2 class="main-title">KHÓA HỌC SPACEDEV</h2>
                 <p class="top-des">
-                    Cho dù bạn muốn tìm kiếm công việc, khởi nghiệp, phát triển hoạt động kinh doanh hay chỉ đơn giản là muốn khám phá thế giới, hãy chọn lộ trình học tập mà bạn muốn và bắt đầu câu chuyện thành công của bạn.
+                    Cho dù bạn muốn tìm kiếm công việc, khởi nghiệp, phát triển hoạt động kinh doanh hay chỉ đơn giản là
+                    muốn khám phá thế giới, hãy chọn lộ trình học tập mà bạn muốn và bắt đầu câu chuyện thành công của
+                    bạn.
                 </p>
                 <div class="textbox" style="margin-top: 100px;">
                     <h3 class="sub-title">KHÓA HỌC</h3>
                     <h2 class="main-title">OFFLINE</h2>
+                </div>
+                <div class="flex justify-between items-center mt-10 mb-10">
+                    <div class="category">
+                        <a href="#" class="item active">Cất cả</a>
+                        <a href="#" class="item">Frontend</a>
+                        <a href="#" class="item">Backend</a>
+                        <a href="#" class="item">UI/UX</a>
+                        <a href="#" class="item">Devops</a>
+                    </div>
+                    <div class="flex">
+                        <div class="input-search">
+                            <input value="Reactjs" />
+                            <button>Tìm kiếm</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="list row">
                     <div class="col-md-4 course">
@@ -245,6 +269,17 @@
                         </div>
                     </div>
                 </div>
+                <div class="flex justify-end mt-10">
+                    <div class="paginate">
+                        <a href="#" class="prev">Trang trước</a>
+                        <a href="#" class="item">1</a>
+                        <a href="#" class="item">2</a>
+                        <a href="#" class="item active">3</a>
+                        <a href="#" class="item">4</a>
+                        <a href="#" class="item">5</a>
+                        <a href="#" class="next">Trang sau</a>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -295,7 +330,14 @@
         </div>
         <div class="copy-right">
             <div class="container">
-                <p>2020 spacedev.vn</p>
+                <div class="flex gap-2">
+                    2020 spacedev.vn
+                    <div class="select flex gap-1 cursor-pointer items-center">
+                        <img width="15" src="./img/icon-lang.svg" alt="">
+                        Tiếng Việt
+                        <img src="./img/nav-caret.svg" style="margin-top: 13px"/>
+                    </div>
+                </div>
                 <p>Được thiết kế và lập trình bởi Spacedev Team</p>
             </div>
         </div>

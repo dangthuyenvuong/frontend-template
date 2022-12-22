@@ -9,6 +9,15 @@
     z-index: 91;
     @include transform(translate(-100%, 0%));
     @include transition-default;
+    .account {
+        display: flex;
+        gap: 10px;
+        img {
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+        }
+    }
     ul {
         height: 100%;
         li {

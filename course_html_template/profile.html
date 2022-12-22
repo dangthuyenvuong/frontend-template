@@ -16,6 +16,7 @@
     <meta property="og:site_name" content="" />
     <meta property="og:image" content="" />
 
+    <link rel="stylesheet" href="dest/tailwind.css">
     <link rel="stylesheet" href="dest/style.min.css">
     <link rel="stylesheet" href="dest/fonts.css">
     <link rel="stylesheet" href="dest/stylelibs.min.css">
@@ -60,6 +61,7 @@
                 </div> -->
             </div>
         </div>
+        <div class="progress"></div>
     </header>
     <nav class="nav">
         <ul>
@@ -67,7 +69,12 @@
                 <a href="./signin.html">Đăng ký / Đăng nhập</a>
             </li>
             <li>
-                <a href="./profile.html">Tài khoản</a>
+                <a href="./profile.html" class="account">
+                    <div class="avatar">
+                        <img src="img/avt.png" alt="">
+                    </div>
+                    <div class="name">Đặng Thuyền Vương</div>
+                </a>
             </li>
             <li>
                 <a class="active" href="./">Trang chủ</a>
@@ -107,6 +114,7 @@
                             <a href="#">Dự án đã làm</a>
                             <a href="#">Lịch sử thanh toán</a>
                             <a href="#">Quản lý COIN của tôi</a>
+                            <a href="#">Khóa học đã xem</a>
                         </div>
                         <div class="tab-content">
                             <div class="tab1" style="display: none;">
@@ -129,6 +137,28 @@
                                 <label>
                                     <p>Skype<span>*</span></p>
                                     <input type="text" placeholder="Skype url">
+                                </label>
+                                <label>
+                                    <p></p>
+                                    <div class="checkcontainer">
+                                        Thay đổi mật khẩu
+                                        <!-- Giảm giá còn <span><strong>5.800.000 VND</strong>, còn lại 100 COIN</span> -->
+                                        <!-- Cần ít nhất 200 COIN để giảm giá -->
+                                        <input type="checkbox" checked="checked">
+                                        <span class="checkmark"></span>
+                                    </div>
+                                </label>
+                                <label>
+                                    <p>Mật khẩu cũ<span>*</span></p>
+                                    <input type="password" placeholder="Mật khẩu cũ">
+                                </label>
+                                <label>
+                                    <p>Mật khẩu mới<span>*</span></p>
+                                    <input type="password" placeholder="Mật khẩu mới">
+                                </label>
+                                <label>
+                                    <p>Xác nhận<span>*</span></p>
+                                    <input type="password" placeholder="Xác nhận mật khẩu">
                                 </label>
                                 <div class="btn main rect">LƯU LẠI</div>
                             </div>
@@ -355,6 +385,58 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="tab6">
+                                <div class="list row">
+                                    <div class="col-md-6 course">
+                                        <div class="wrap">
+                                            <a class="cover" href="./course-detail.html">
+                                                <img src="./img/img1.png" alt="">
+                                            </a>
+                                            <div class="info">
+                                                <a class="name" href="./course-detail.html">
+                                                    Reactjs Advanced
+                                                </a>
+                                                <p class="des">
+                                                    One of the best corporate fashion brands in Sydney
+                                                </p>
+                                            </div>
+                                            <div class="bottom">
+                                                <div class="teacher">
+                                                    <div class="avatar">
+                                                        <img src="img/avt.png" alt="">
+                                                    </div>
+                                                    <div class="name">Vương Đặng</div>
+                                                </div>
+                                                <a href="/register.html" class="register-btn">Đăng Ký</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 course">
+                                        <div class="wrap">
+                                            <a class="cover" href="./course-detail.html">
+                                                <img src="./img/img1.png" alt="">
+                                            </a>
+                                            <div class="info">
+                                                <a class="name" href="./course-detail.html">
+                                                    Reactjs Advanced
+                                                </a>
+                                                <p class="des">
+                                                    One of the best corporate fashion brands in Sydney
+                                                </p>
+                                            </div>
+                                            <div class="bottom">
+                                                <div class="teacher">
+                                                    <div class="avatar">
+                                                        <img src="img/avt.png" alt="">
+                                                    </div>
+                                                    <div class="name">Vương Đặng</div>
+                                                </div>
+                                                <a href="/register.html" class="register-btn">Đăng Ký</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -409,7 +491,14 @@
         </div>
         <div class="copy-right">
             <div class="container">
-                <p>2020 spacedev.vn</p>
+                <div class="flex gap-2">
+                    2020 spacedev.vn
+                    <div class="select flex gap-1 cursor-pointer items-center">
+                        <img width="15" src="./img/icon-lang.svg" alt="">
+                        Tiếng Việt
+                        <img src="./img/nav-caret.svg" style="margin-top: 13px"/>
+                    </div>
+                </div>
                 <p>Được thiết kế và lập trình bởi Spacedev Team</p>
             </div>
         </div>

@@ -17,6 +17,7 @@
     <meta property="og:site_name" content="" />
     <meta property="og:image" content="" />
 
+    <link rel="stylesheet" href="dest/tailwind.css">
     <link rel="stylesheet" href="dest/style.min.css">
     <link rel="stylesheet" href="dest/fonts.css">
 </head>
@@ -60,6 +61,7 @@
                 </div> -->
             </div>
         </div>
+        <div class="progress"></div>
     </header>
     <nav class="nav">
         <ul>
@@ -67,7 +69,12 @@
                 <a href="./signin.html">Đăng ký / Đăng nhập</a>
             </li>
             <li>
-                <a href="./profile.html">Tài khoản</a>
+                <a href="./profile.html" class="account">
+                    <div class="avatar">
+                        <img src="img/avt.png" alt="">
+                    </div>
+                    <div class="name">Đặng Thuyền Vương</div>
+                </a>
             </li>
             <li>
                 <a class="active" href="./">Trang chủ</a>
@@ -89,16 +96,43 @@
     <div class="overlay_nav"></div>
     <main id="main">
         <div class="homepage">
-            <div class="banner jarallax">
-                <div class="container">
-                    <div class="content">
-                        <h2 class="title">Kiến thức</h2>
-                        <h2 class="title">mở ra trang mới cuộc đời bạn</h2>
-                        <a href="/course-list.html" class="btn main round">KHÓA HỌC</a>
+            <div class="slider">
+                <div class="item">
+                    <div class="container">
+                        <div class="content">
+                            <h2 class="title">Điều quan trọng không phải là <span style="color:rgb(229, 57, 53);">vị trí
+                                    đứng</span> mà là <span style="color:rgb(63, 81, 181);">hướng đi</span></h2>
+                            <a href="https://spacedev.vn/roadmap" class="btn main round">Roadmap</a>
+                        </div>
+                    </div>
+                    <div class="jarallax-img">
+                        <img src="https://spacedev.vn/images/bn-top.jpg" alt="">
                     </div>
                 </div>
-                <div class="jarallax-img">
-                    <img src="https://spacedev.vn/images/bn-top.jpg" alt="">
+                <div class="item">
+                    <div class="container">
+                        <div class="content">
+                            <h2 class="title">Kiến thức</h2>
+                            <h2 class="title">mở ra trang mới cuộc đời bạn</h2>
+                            <a href="https://spacedev.vn" class="btn main round">KHÓA HỌC</a>
+                        </div>
+                    </div>
+                    <div class="jarallax-img">
+                        <img src="https://spacedev.vn/images/bn-top.jpg" alt="">
+                    </div>
+                </div>
+                
+                <div class="item">
+                    <div class="container">
+                        <div class="content">
+                            <h2 class="title">Chuyên nghiệp</h2>
+                            <h2 class="title">làm cho bạn khác biệt</h2>
+                            <a href="https://spacedev.vn/about" class="btn main round">KHÓA HỌC</a>
+                        </div>
+                    </div>
+                    <div class="jarallax-img">
+                        <img src="https://spacedev.vn/images/bn-top.jpg" alt="">
+                    </div>
                 </div>
             </div>
             <section class="section-1">
@@ -266,13 +300,21 @@
                 <div class="container">
                     <div class="row">
                         <div class="titlebox col-md-6 col-sm-12 col-xs-12">
-                            <h2 class="main-title white textleft">Những điều <br><span>đặc biệt</span> tại Spacedev</h2>
+                            <h2 class="main-title white textleft"><span>Giá trị Cốt lỗi</span> <br /> tại Spacedev</h2>
                             <div class="videodif" data-src="video/cfd-video-intro.mp4">
                                 <img src="https://svtech.com.vn/wp-content/uploads/2020/07/dexus-office-space.jpg"
                                     alt="">
                                 <div class="play-btn btn-video-intro">
                                     <img src="img/play-icon.svg" alt="">
                                 </div>
+                            </div>
+                            <div class="item" style="margin-top: 35px;">
+                                <h4>Tiếp thu và phát triển</h4>
+                                <p>Các khóa học của spacedev được soạn thảo cẩn thận và sắp xếp một cách có trật tự giúp
+                                    cho việc học trở nên dễ dàng
+                                    hơn. Bên cạnh đó các kỹ thuật, công nghệ áp dụng hoàn toàn là các kiến thực thực tế
+                                    trong các doanh nghiệp đang áp dụng
+                                </p>
                             </div>
                         </div>
                         <div class="contentbox col-md-6 col-sm-12 col-xs-12">
@@ -327,7 +369,7 @@
             <section class="section-testimonial">
                 <div class="container">
                     <div class="textbox">
-                        <h2 class="main-title white">Học viên cảm nhận về Spacedev</h2>
+                        <h2 class="main-title white">Học viên nói gì về spacedev</h2>
                     </div>
                     <div class="testimonial">
                         <div class="testimonial-item">
@@ -566,7 +608,14 @@
         </div>
         <div class="copy-right">
             <div class="container">
-                <p>2020 spacedev.vn</p>
+                <div class="flex gap-2">
+                    2020 spacedev.vn
+                    <div class="select flex gap-1 cursor-pointer items-center">
+                        <img width="15" src="./img/icon-lang.svg" alt="">
+                        Tiếng Việt
+                        <img src="./img/nav-caret.svg" style="margin-top: 13px" />
+                    </div>
+                </div>
                 <p>Được thiết kế và lập trình bởi Spacedev Team</p>
             </div>
         </div>

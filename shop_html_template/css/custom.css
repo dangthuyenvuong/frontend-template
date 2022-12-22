@@ -54,4 +54,26 @@
     cursor: pointer;
 }
 
-.promotion-code-card .code {}
+.navbar-brand {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.btn-quantity {
+    border: 1px solid #ccc;
+    height: 30px;
+}
+.btn-quantity .btn{
+    height: 30px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-quantity input {
+    width: 50px;
+    text-align: center;
+    border: none;
+    outline: none;
+}

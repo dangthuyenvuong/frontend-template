@@ -255,21 +255,21 @@
         .contentbox {
             margin-top: 12px;
             padding-left: 40px;
-            .item {
-                h4 {
-                    font-family: ab;
-                    font-size: 22px;
-                    margin-bottom: 15px;
-                }
-                p {
-                    text-align: justify;
-                }
-                &:not(:last-child) {
-                    margin-bottom: 45px;
-                }
+            
+        }
+        .item {
+            h4 {
+                font-family: ab;
+                font-size: 22px;
+                margin-bottom: 15px;
+            }
+            p {
+                text-align: justify;
+            }
+            &:not(:last-child) {
+                margin-bottom: 45px;
             }
         }
-
         @include mobile {
             .titlebox {
                 .main-title {

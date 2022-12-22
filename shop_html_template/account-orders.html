@@ -629,15 +629,15 @@
                 <div class="d-flex align-items-center">
 
                   <!-- Select -->
-                  <select class="custom-select custom-select-xxs w-auto">
-                    <option value="1">1</option>
-                    <option value="1">2</option>
-                    <option value="1">3</option>
-                  </select>
+                  <div class="btn-group btn-quantity">
+                    <button class="btn">-</button>
+                    <input value="1"/>
+                    <button class="btn">+</button>
+                  </div>
 
                   <!-- Remove -->
                   <a class="font-size-xs text-gray-400 ml-auto" href="#!">
-                    <i class="fe fe-x"></i> Remove
+                    <i class="fe fe-x"></i> Xóa
                   </a>
 
                 </div>
@@ -667,15 +667,15 @@
                 <div class="d-flex align-items-center">
 
                   <!-- Select -->
-                  <select class="custom-select custom-select-xxs w-auto">
-                    <option value="1">1</option>
-                    <option value="1">2</option>
-                    <option value="1">3</option>
-                  </select>
+                  <div class="btn-group btn-quantity">
+                    <button class="btn">-</button>
+                    <input value="1"/>
+                    <button class="btn">+</button>
+                  </div>
 
                   <!-- Remove -->
                   <a class="font-size-xs text-gray-400 ml-auto" href="#!">
-                    <i class="fe fe-x"></i> Remove
+                    <i class="fe fe-x"></i> Xóa
                   </a>
 
                 </div>
@@ -1651,7 +1651,7 @@
     <div class="container">
 
       <!-- Brand -->
-      <a class="navbar-brand" href="./overview.html">
+      <a class="navbar-brand" href="./index.html">
         <img style="width: 50px" src="./img/logo.svg" />
         Shopper.
       </a>
@@ -1674,13 +1674,13 @@
             <a class="nav-link" href="./shop.html">Sản phẩm</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link" href="#">Laptop</a>
+            <a class="nav-link" href="./shop.html">Laptop</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link" href="#">Máy tính</a>
+            <a class="nav-link" href="./shop.html">Máy tính</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="docs/getting-started.html">Sản phẩm khuyến mãi</a>
+            <a class="nav-link" href="./shop.html">Sản phẩm khuyến mãi</a>
           </li>
         </ul>
 
@@ -1744,7 +1744,7 @@
         <div class="col-12 text-center">
 
           <!-- Heading -->
-          <h3 class="mb-10">My Account</h3>
+          <h3 class="mb-10">Theo dõi đơn hàng</h3>
 
         </div>
       </div>
@@ -1754,28 +1754,113 @@
           <!-- Nav -->
           <nav class="mb-10 mb-md-0">
             <div class="list-group list-group-sm list-group-strong list-group-flush-x">
-              <a class="list-group-item list-group-item-action dropright-toggle active" href="account-orders.html">
-                Orders
-              </a>
-              <a class="list-group-item list-group-item-action dropright-toggle " href="account-wishlist.html">Wishlist</a>
-              <a class="list-group-item list-group-item-action dropright-toggle " href="account-personal-info.html">
-                Personal Info
-              </a>
-              <a class="list-group-item list-group-item-action dropright-toggle " href="account-address.html">
-                Addresses
-              </a>
-              <a class="list-group-item list-group-item-action dropright-toggle " href="account-payment.html">
-                Payment Methods
-              </a>
-              <a class="list-group-item list-group-item-action dropright-toggle" href="#!">
-                Logout
-              </a>
+              <a class="list-group-item list-group-item-action dropright-toggle " href="account-orders.html">Theo dõi đơn hàng</a>
+              <a class="list-group-item list-group-item-action dropright-toggle " href="account-personal-info.html">Thông tin cá nhân</a>
+              <a class="list-group-item list-group-item-action dropright-toggle active" href="account-wishlist.html">Sản phẩm yêu thích</a>
+              <a class="list-group-item list-group-item-action dropright-toggle " href="account-address.html">Sổ địa chỉ</a>
+              <a class="list-group-item list-group-item-action dropright-toggle " href="account-payment.html">Sổ thanh toán</a>
+              <a class="list-group-item list-group-item-action dropright-toggle" href="#!">Đăng xuất</a>
             </div>
           </nav>
 
 
         </div>
         <div class="col-12 col-md-9 col-lg-8 offset-lg-1">
+
+           <!-- Order -->
+           <div class="card card-lg mb-5 border">
+            <div class="card-body pb-0">
+
+              <!-- Info -->
+              <div class="card card-sm">
+                <div class="card-body bg-light">
+                  <div class="row">
+                    <div class="col-6 col-lg-3">
+
+                      <!-- Heading -->
+                      <h6 class="heading-xxxs text-muted">MÃ ĐƠN HÀNG:</h6>
+
+                      <!-- Text -->
+                      <p class="mb-lg-0 font-size-sm font-weight-bold">
+                        871090437
+                      </p>
+
+                    </div>
+                    <div class="col-6 col-lg-3">
+
+                      <!-- Heading -->
+                      <h6 class="heading-xxxs text-muted">Ngày vận chuyển:</h6>
+
+                      <!-- Text -->
+                      <p class="mb-lg-0 font-size-sm font-weight-bold">
+                        <time datetime="2019-09-25">
+                          25 Sep, 2019
+                        </time>
+                      </p>
+
+                    </div>
+                    <div class="col-6 col-lg-3">
+
+                      <!-- Heading -->
+                      <h6 class="heading-xxxs text-muted">Trạng thái:</h6>
+
+                      <!-- Text -->
+                      <p class="mb-0 font-size-sm font-weight-bold">
+                        Chờ xác nhận
+                      </p>
+
+                    </div>
+                    <div class="col-6 col-lg-3">
+
+                      <!-- Heading -->
+                      <h6 class="heading-xxxs text-muted">Tổng tiền:</h6>
+
+                      <!-- Text -->
+                      <p class="mb-0 font-size-sm font-weight-bold">
+                        $75.00
+                      </p>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="card-footer">
+              <div class="row align-items-center">
+                <div class="col-12 col-lg-6">
+                  <div class="form-row mb-4 mb-lg-0">
+                    <div class="col-3">
+
+                      <!-- Image -->
+                      <div class="embed-responsive embed-responsive-1by1 bg-cover"
+                        style="background-image: url(./img/products/product-11.jpg);"></div>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                  <div class="form-row">
+                    <div class="col-6">
+
+                      <!-- Button -->
+                      <a class="btn btn-sm btn-block btn-outline-dark" href="account-order.html">
+                        Chi tiết
+                      </a>
+
+                    </div>
+                    <div class="col-6">
+
+                      <!-- Button -->
+                      <a class="btn btn-sm btn-block btn-outline-dark" href="#!">Hủy đơn</a>
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
 
           <!-- Order -->
           <div class="card card-lg mb-5 border">
@@ -1788,7 +1873,7 @@
                     <div class="col-6 col-lg-3">
 
                       <!-- Heading -->
-                      <h6 class="heading-xxxs text-muted">Order No:</h6>
+                      <h6 class="heading-xxxs text-muted">MÃ ĐƠN HÀNG:</h6>
 
                       <!-- Text -->
                       <p class="mb-lg-0 font-size-sm font-weight-bold">
@@ -1799,7 +1884,7 @@
                     <div class="col-6 col-lg-3">
 
                       <!-- Heading -->
-                      <h6 class="heading-xxxs text-muted">Shipped date:</h6>
+                      <h6 class="heading-xxxs text-muted">Ngày vận chuyển:</h6>
 
                       <!-- Text -->
                       <p class="mb-lg-0 font-size-sm font-weight-bold">
@@ -1812,18 +1897,18 @@
                     <div class="col-6 col-lg-3">
 
                       <!-- Heading -->
-                      <h6 class="heading-xxxs text-muted">Status:</h6>
+                      <h6 class="heading-xxxs text-muted">Trạng thái:</h6>
 
                       <!-- Text -->
                       <p class="mb-0 font-size-sm font-weight-bold">
-                        Awating Delivery
+                        Chờ vận chuyển
                       </p>
 
                     </div>
                     <div class="col-6 col-lg-3">
 
                       <!-- Heading -->
-                      <h6 class="heading-xxxs text-muted">Order Amount:</h6>
+                      <h6 class="heading-xxxs text-muted">Tổng tiền:</h6>
 
                       <!-- Text -->
                       <p class="mb-0 font-size-sm font-weight-bold">
@@ -1867,7 +1952,7 @@
                       <div class="embed-responsive embed-responsive-1by1 bg-light">
                         <a class="embed-responsive-item embed-responsive-item-text text-reset" href="#!">
                           <div class="font-size-xxs font-weight-bold">
-                            +2 <br> more
+                            +2 <br> ảnh
                           </div>
                         </a>
                       </div>
@@ -1881,14 +1966,8 @@
 
                       <!-- Button -->
                       <a class="btn btn-sm btn-block btn-outline-dark" href="account-order.html">
-                        Order Details
+                        Chi tiết
                       </a>
-
-                    </div>
-                    <div class="col-6">
-
-                      <!-- Button -->
-                      <a class="btn btn-sm btn-block btn-outline-dark" href="#!">Re order</a>
 
                     </div>
                   </div>
@@ -1909,102 +1988,7 @@
                     <div class="col-6 col-lg-3">
 
                       <!-- Heading -->
-                      <h6 class="heading-xxxs text-muted">Order No:</h6>
-
-                      <!-- Text -->
-                      <p class="mb-lg-0 font-size-sm font-weight-bold">
-                        871090437
-                      </p>
-
-                    </div>
-                    <div class="col-6 col-lg-3">
-
-                      <!-- Heading -->
-                      <h6 class="heading-xxxs text-muted">Shipped date:</h6>
-
-                      <!-- Text -->
-                      <p class="mb-lg-0 font-size-sm font-weight-bold">
-                        <time datetime="2019-09-25">
-                          25 Sep, 2019
-                        </time>
-                      </p>
-
-                    </div>
-                    <div class="col-6 col-lg-3">
-
-                      <!-- Heading -->
-                      <h6 class="heading-xxxs text-muted">Status:</h6>
-
-                      <!-- Text -->
-                      <p class="mb-0 font-size-sm font-weight-bold">
-                        In Processing
-                      </p>
-
-                    </div>
-                    <div class="col-6 col-lg-3">
-
-                      <!-- Heading -->
-                      <h6 class="heading-xxxs text-muted">Order Amount:</h6>
-
-                      <!-- Text -->
-                      <p class="mb-0 font-size-sm font-weight-bold">
-                        $75.00
-                      </p>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-            <div class="card-footer">
-              <div class="row align-items-center">
-                <div class="col-12 col-lg-6">
-                  <div class="form-row mb-4 mb-lg-0">
-                    <div class="col-3">
-
-                      <!-- Image -->
-                      <div class="embed-responsive embed-responsive-1by1 bg-cover"
-                        style="background-image: url(./img/products/product-11.jpg);"></div>
-
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-lg-6">
-                  <div class="form-row">
-                    <div class="col-6">
-
-                      <!-- Button -->
-                      <a class="btn btn-sm btn-block btn-outline-dark" href="account-order.html">
-                        Order Details
-                      </a>
-
-                    </div>
-                    <div class="col-6">
-
-                      <!-- Button -->
-                      <a class="btn btn-sm btn-block btn-outline-dark" href="#!">Re order</a>
-
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Order -->
-          <div class="card card-lg mb-5 border">
-            <div class="card-body pb-0">
-
-              <!-- Info -->
-              <div class="card card-sm">
-                <div class="card-body bg-light">
-                  <div class="row">
-                    <div class="col-6 col-lg-3">
-
-                      <!-- Heading -->
-                      <h6 class="heading-xxxs text-muted">Order No:</h6>
+                      <h6 class="heading-xxxs text-muted">MÃ ĐƠN HÀNG:</h6>
 
                       <!-- Text -->
                       <p class="mb-lg-0 font-size-sm font-weight-bold">
@@ -2015,7 +1999,7 @@
                     <div class="col-6 col-lg-3">
 
                       <!-- Heading -->
-                      <h6 class="heading-xxxs text-muted">Shipped date:</h6>
+                      <h6 class="heading-xxxs text-muted">Ngày vận chuyển:</h6>
 
                       <!-- Text -->
                       <p class="mb-lg-0 font-size-sm font-weight-bold">
@@ -2028,18 +2012,18 @@
                     <div class="col-6 col-lg-3">
 
                       <!-- Heading -->
-                      <h6 class="heading-xxxs text-muted">Status:</h6>
+                      <h6 class="heading-xxxs text-muted">Trạng thái:</h6>
 
                       <!-- Text -->
                       <p class="mb-0 font-size-sm font-weight-bold">
-                        Delivered
+                        Đã giao hàng
                       </p>
 
                     </div>
                     <div class="col-6 col-lg-3">
 
                       <!-- Heading -->
-                      <h6 class="heading-xxxs text-muted">Order Amount:</h6>
+                      <h6 class="heading-xxxs text-muted">Tổng tiền:</h6>
 
                       <!-- Text -->
                       <p class="mb-0 font-size-sm font-weight-bold">
@@ -2078,14 +2062,14 @@
 
                       <!-- Button -->
                       <a class="btn btn-sm btn-block btn-outline-dark" href="account-order.html">
-                        Order Details
+                        Chi tiết
                       </a>
 
                     </div>
                     <div class="col-6">
 
                       <!-- Button -->
-                      <a class="btn btn-sm btn-block btn-outline-dark" href="#!">Re order</a>
+                      <a class="btn btn-sm btn-block btn-outline-dark" href="#!">Đặt lại</a>
 
                     </div>
                   </div>
