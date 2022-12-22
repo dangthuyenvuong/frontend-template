@@ -64,11 +64,14 @@
     </header>
     <nav class="nav">
         <ul>
-            <li class="li_login">
-                <a href="#">Đăng ký / Đăng nhập</a>
+            <li>
+                <a href="./signin.html">Đăng ký / Đăng nhập</a>
             </li>
-            <li class="active">
-                <a href="./">Trang chủ</a>
+            <li>
+                <a href="./profile.html">Tài khoản</a>
+            </li>
+            <li>
+                <a class="active" href="./">Trang chủ</a>
             </li>
             <li>
                 <a href="./team.html">Spacedev Team</a>
@@ -85,325 +88,258 @@
         </ul>
     </nav>
     <div class="overlay_nav"></div>
-    <main class="course-detail" id="main">
-        <section class="banner style2" style="--background:#cde6fb">
-            <div class="container">
-                <div class="info">
-                    <h1>Thực Chiến
-                        Reactjs Advanced</h1>
-                    <div class="row">
-                        <div class="date"><strong>Khai giảng:</strong> 12/10/2020</div>
-                        <div class="time"><strong>Thời lượng:</strong> 18 buổi</div>
-                    </div>
-                    <a class="btn white round" style="--color-btn:#70b6f1" href="./register.html">đăng ký</a>
-                </div>
-            </div>
-            <div class="bottom">
+    <main id="main">
+        <div class="course-detail">
+            <section class="banner style2" style="--background:#cde6fb">
                 <div class="container">
-                    <div class="video">
-                        <div class="icon">
-                            <img src="img/play-icon-white.png" alt="">
-                        </div> <span>giới thiệu</span>
-                    </div>
-                    <div class="money">4.000.000 VND</div>
-                </div>
-            </div>
-        </section>
-        <section class="section-2">
-            <div class="container">
-                <p class="des">Many Laravel apps don’t warrant the complexity of a full front-end framework like Vue or
-                    React. In this series, we’ll walk through a handful of simple ways to add dynamic functionality to
-                    your apps.</p>
-                <h2 class="title">giới thiệu về khóa học</h2>
-                <div class="cover">
-                    <img src="img/course-detail-img.png" alt="">
-                </div>
-                <h3 class="title">nội dung khóa học</h3>
-                <div class="accordion">
-                    <div class="accordion__title">
-                        <div class="date">Ngày 1</div>
-                        <h3>Giới thiệu HTML, SEO, BEM.</h3>
-                    </div>
-                    <div class="content">
-                        I'd like to demonstrate a powerful little pattern called “Server-Fetched Partials” that offers
-                        some tangible benefits over alternatives like VueJS for simple page interactions.
-                    </div>
-                </div>
-                <div class="accordion">
-                    <div class="accordion__title">
-                        <div class="date">Ngày 2</div>
-                        <h3>CSS, CSS3, Flexbox, Grid</h3>
-                    </div>
-                    <div class="content">
-                        I'd like to demonstrate a powerful little pattern called “Server-Fetched Partials” that offers
-                        some tangible benefits over alternatives like VueJS for simple page interactions.
-                    </div>
-                </div>
-                <div class="accordion">
-                    <div class="accordion__title">
-                        <div class="date">Ngày 3</div>
-                        <h3>Media Queries</h3>
-                    </div>
-                    <div class="content">
-                        I'd like to demonstrate a powerful little pattern called “Server-Fetched Partials” that offers
-                        some tangible benefits over alternatives like VueJS for simple page interactions.
-                    </div>
-                </div>
-                <div class="accordion">
-                    <div class="accordion__title">
-                        <div class="date">Ngày 4</div>
-                        <h3>Boostrap 4</h3>
-                    </div>
-                    <div class="content">
-                        I'd like to demonstrate a powerful little pattern called “Server-Fetched Partials” that offers
-                        some tangible benefits over alternatives like VueJS for simple page interactions.
-                    </div>
-                </div>
-                <div class="accordion">
-                    <div class="accordion__title">
-                        <div class="date">Ngày 5</div>
-                        <h3>Thực hành dự án website Landing Page</h3>
-                    </div>
-                    <div class="content">
-                        I'd like to demonstrate a powerful little pattern called “Server-Fetched Partials” that offers
-                        some tangible benefits over alternatives like VueJS for simple page interactions.
-                    </div>
-                </div>
-                <div class="accordion">
-                    <div class="accordion__title">
-                        <div class="date">Ngày 6</div>
-                        <h3>Cài đặt Grunt và cấu trúc thư mục dự án</h3>
-                    </div>
-                    <div class="content">
-                        I'd like to demonstrate a powerful little pattern called “Server-Fetched Partials” that offers
-                        some tangible benefits over alternatives like VueJS for simple page interactions.
-                    </div>
-                </div>
-                <h3 class="title">yêu cầu cần có</h3>
-                <div class="row row-check">
-                    <div class="col-md-6">Đã từng học qua HTML, CSS</div>
-                    <div class="col-md-6">Cài đặt phần mềm Photoshop,
-                        Adobe illustrator, Skype</div>
-
-                </div>
-                <h3 class="title">hình thức học</h3>
-                <div class="row row-check">
-                    <div class="col-md-6">Học offline tại văn phòng, cùng Vương Đặng và 3 đồng nghiệp.</div>
-                    <div class="col-md-6">Dạy và thực hành thêm bài tập online
-                        thông qua Skype.</div>
-                    <div class="col-md-6">Được các mentor và các bạn trong team Spacedev hổ trợ thông qua group Spacedev Facebook
-                        hoặc phần mềm điều khiển máy tính.</div>
-                    <div class="col-md-6">Thực hành 2 dự án thực tế với sự hướng dẫn của Spacedev Team.</div>
-
-                </div>
-                <h3 class="title">
-                    <div class="date-start">lịch học</div>
-                    <div class="sub">*Lịch học và thời gian có thể thống nhất lại theo số đông học viên.</div>
-                </h3>
-                <p>
-                    <strong>Ngày bắt đầu: </strong> 09/09/2020 <br>
-                    <strong>Thời gian học: </strong> Thứ 3 từ 18h45-21h45, Thứ 7 từ 12h-15h, Chủ nhật từ 15h-18h
-                </p>
-                <h3 class="title">Người dạy</h3>
-                <div class="teaches">
-                    <div class="teacher">
-                        <div class="avatar">
-                            <img src="img/avt.png" alt="">
+                    <div class="info">
+                        <h1>Thực Chiến
+                            Reactjs Advanced</h1>
+                        <div class="row">
+                            <div class="date"><strong>Khai giảng:</strong> 12/10/2020</div>
+                            <div class="time"><strong>Thời lượng:</strong> 18 buổi</div>
                         </div>
-                        <div class="info">
-                            <div class="name">Đặng Thuyền Vương</div>
-                            <div class="title">Founder Spacedev & Fullstack developer</div>
-                            <p class="intro">
-                                My education, career, and even personal life have been molded by one simple principle;
-                                well
-                                designed information resonates with people and can change lives.I have a passion for
-                                making
-                                information resonate. It all starts with how people think. With how humans work. As
-                                humans
-                                we have learned how to read and write and while that is incredible, we are also already
-                                hard-wired to do some things a bit more "automatically"
-                            </p>
-                            <p><strong>Website:</strong> <a href="#">https://dangthuyenvuong.github.io/</a></p>
-                        </div>
+                        <a class="btn white round" style="--color-btn:#70b6f1" href="./register.html">đăng ký</a>
                     </div>
                 </div>
                 <div class="bottom">
-                    <div class="user">
-                        <img src="img/user-group-icon.png" alt=""> 12 bạn đã đăng ký
-                    </div>
-                    <div class="btn main btn-register round">đăng ký</div>
-                    <div class="btn-share btn overlay round btn-icon">
-                        <img src="img/facebook.svg" alt="">
+                    <div class="container">
+                        <div class="video">
+                            <div class="icon">
+                                <img src="img/play-icon-white.png" alt="">
+                            </div> <span>giới thiệu</span>
+                        </div>
+                        <div class="money">4.000.000 VND</div>
                     </div>
                 </div>
+            </section>
+            <section class="section-2">
+                <div class="container">
+                    <p class="des">Many Laravel apps don’t warrant the complexity of a full front-end framework like Vue
+                        or
+                        React. In this series, we’ll walk through a handful of simple ways to add dynamic functionality
+                        to
+                        your apps.</p>
+                    <h2 class="title">giới thiệu về khóa học</h2>
+                    <div class="cover">
+                        <img src="img/course-detail-img.png" alt="">
+                    </div>
+                    <h3 class="title">nội dung khóa học</h3>
+                    <div class="accordion">
+                        <div class="accordion__title">
+                            <div class="date">Ngày 1</div>
+                            <h3>Giới thiệu HTML, SEO, BEM.</h3>
+                        </div>
+                        <div class="content">
+                            I'd like to demonstrate a powerful little pattern called “Server-Fetched Partials” that
+                            offers
+                            some tangible benefits over alternatives like VueJS for simple page interactions.
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <div class="accordion__title">
+                            <div class="date">Ngày 2</div>
+                            <h3>CSS, CSS3, Flexbox, Grid</h3>
+                        </div>
+                        <div class="content">
+                            I'd like to demonstrate a powerful little pattern called “Server-Fetched Partials” that
+                            offers
+                            some tangible benefits over alternatives like VueJS for simple page interactions.
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <div class="accordion__title">
+                            <div class="date">Ngày 3</div>
+                            <h3>Media Queries</h3>
+                        </div>
+                        <div class="content">
+                            I'd like to demonstrate a powerful little pattern called “Server-Fetched Partials” that
+                            offers
+                            some tangible benefits over alternatives like VueJS for simple page interactions.
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <div class="accordion__title">
+                            <div class="date">Ngày 4</div>
+                            <h3>Boostrap 4</h3>
+                        </div>
+                        <div class="content">
+                            I'd like to demonstrate a powerful little pattern called “Server-Fetched Partials” that
+                            offers
+                            some tangible benefits over alternatives like VueJS for simple page interactions.
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <div class="accordion__title">
+                            <div class="date">Ngày 5</div>
+                            <h3>Thực hành dự án website Landing Page</h3>
+                        </div>
+                        <div class="content">
+                            I'd like to demonstrate a powerful little pattern called “Server-Fetched Partials” that
+                            offers
+                            some tangible benefits over alternatives like VueJS for simple page interactions.
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <div class="accordion__title">
+                            <div class="date">Ngày 6</div>
+                            <h3>Cài đặt Grunt và cấu trúc thư mục dự án</h3>
+                        </div>
+                        <div class="content">
+                            I'd like to demonstrate a powerful little pattern called “Server-Fetched Partials” that
+                            offers
+                            some tangible benefits over alternatives like VueJS for simple page interactions.
+                        </div>
+                    </div>
+                    <h3 class="title">yêu cầu cần có</h3>
+                    <div class="row row-check">
+                        <div class="col-md-6">Đã từng học qua HTML, CSS</div>
+                        <div class="col-md-6">Cài đặt phần mềm Photoshop,
+                            Adobe illustrator, Skype</div>
+
+                    </div>
+                    <h3 class="title">hình thức học</h3>
+                    <div class="row row-check">
+                        <div class="col-md-6">Học offline tại văn phòng, cùng Vương Đặng và 3 đồng nghiệp.</div>
+                        <div class="col-md-6">Dạy và thực hành thêm bài tập online
+                            thông qua Skype.</div>
+                        <div class="col-md-6">Được các mentor và các bạn trong team Spacedev hổ trợ thông qua group
+                            Spacedev
+                            Facebook
+                            hoặc phần mềm điều khiển máy tính.</div>
+                        <div class="col-md-6">Thực hành 2 dự án thực tế với sự hướng dẫn của Spacedev Team.</div>
+
+                    </div>
+                    <h3 class="title">
+                        <div class="date-start">lịch học</div>
+                        <div class="sub">*Lịch học và thời gian có thể thống nhất lại theo số đông học viên.</div>
+                    </h3>
+                    <p>
+                        <strong>Ngày bắt đầu: </strong> 09/09/2020 <br>
+                        <strong>Thời gian học: </strong> Thứ 3 từ 18h45-21h45, Thứ 7 từ 12h-15h, Chủ nhật từ 15h-18h
+                    </p>
+                    <h3 class="title">Người dạy</h3>
+                    <div class="teaches">
+                        <div class="teacher">
+                            <div class="avatar">
+                                <img src="img/avt.png" alt="">
+                            </div>
+                            <div class="info">
+                                <div class="name">Đặng Thuyền Vương</div>
+                                <div class="title">Founder Spacedev & Fullstack developer</div>
+                                <p class="intro">
+                                    My education, career, and even personal life have been molded by one simple
+                                    principle;
+                                    well
+                                    designed information resonates with people and can change lives.I have a passion for
+                                    making
+                                    information resonate. It all starts with how people think. With how humans work. As
+                                    humans
+                                    we have learned how to read and write and while that is incredible, we are also
+                                    already
+                                    hard-wired to do some things a bit more "automatically"
+                                </p>
+                                <p><strong>Website:</strong> <a href="#">https://dangthuyenvuong.github.io/</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="user">
+                            <img src="img/user-group-icon.png" alt=""> 12 bạn đã đăng ký
+                        </div>
+                        <div class="btn main btn-register round">đăng ký</div>
+                        <div class="btn-share btn overlay round btn-icon">
+                            <img src="img/facebook.svg" alt="">
+                        </div>
+                    </div>
 
 
-            </div>
-        </section>
-        <section class="section-3">
-            <div class="container">
-                <div class="textbox">
-                    <h3 class="sub-title">DỰ ÁN</h3>
-                    <h2 class="main-title">THÀNH VIÊN</h2>
                 </div>
-                <div class="list row">
-                    <div class="col-md-4 course">
-                        <div class="wrap">
-                            <a href="#" class="cover">
-                                <img src="./img/img.png" alt="">
-                            </a>
-                            <div class="info">
-                                <a class="name" href="#">
-                                    React JS
+            </section>
+            <section class="section-4">
+                <div class="container">
+                    <div class="textbox">
+                        <h3 class="sub-title">Khóa học</h3>
+                        <h2 class="main-title">Liên quan</h2>
+                    </div>
+                    <div class="list row">
+                        <div class="col-md-4 course">
+                            <div class="wrap">
+                                <a href="#" class="cover">
+                                    <img src="./img/img.png" alt="">
                                 </a>
-                                <p class="des">
-                                    One of the best corporate fashion brands in Sydney
-                                </p>
-                            </div>
-                            <div class="bottom">
-                                <div class="teacher">
-                                    <div class="avatar">
-                                        <img src="img/avt.png" alt="">
-                                    </div>
-                                    <div class="name">Vương Đặng</div>
+                                <div class="info">
+                                    <a class="name" href="#">
+                                        Reactjs Advanced
+                                    </a>
+                                    <p class="des">
+                                        One of the best corporate fashion brands in Sydney
+                                    </p>
                                 </div>
-                                <div class="register-btn">Đăng Ký</div>
+                                <div class="bottom">
+                                    <div class="teacher">
+                                        <div class="avatar">
+                                            <img src="img/avt.png" alt="">
+                                        </div>
+                                        <div class="name">Vương Đặng</div>
+                                    </div>
+                                    <div class="register-btn">Đăng Ký</div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4 course">
-                        <div class="wrap">
-                            <a href="#" class="cover">
-                                <img src="./img/img2.png" alt="">
-                            </a>
-                            <div class="info">
-                                <a class="name" href="#">
-                                    Animation
+                        <div class="col-md-4 course">
+                            <div class="wrap">
+                                <a href="#" class="cover">
+                                    <img src="./img/img2.png" alt="">
                                 </a>
-                                <p class="des">
-                                    One of the best corporate fashion brands in Sydney
-                                </p>
-                            </div>
-                            <div class="bottom">
-                                <div class="teacher">
-                                    <div class="avatar">
-                                        <img src="img/avt.png" alt="">
-                                    </div>
-                                    <div class="name">Vương Đặng</div>
+                                <div class="info">
+                                    <a class="name" href="#">
+                                        Nodejs Advanced
+                                    </a>
+                                    <p class="des">
+                                        One of the best corporate fashion brands in Sydney
+                                    </p>
                                 </div>
-                                <div class="register-btn">Đăng Ký</div>
+                                <div class="bottom">
+                                    <div class="teacher">
+                                        <div class="avatar">
+                                            <img src="img/avt.png" alt="">
+                                        </div>
+                                        <div class="name">Vương Đặng</div>
+                                    </div>
+                                    <div class="register-btn">Đăng Ký</div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4 course">
-                        <div class="wrap">
-                            <a href="#" class="cover">
-                                <img src="./img/img3.png" alt="">
-                            </a>
-                            <div class="info">
-                                <a class="name" href="#">
-                                    Lập trình Nodejs
+                        <div class="col-md-4 course">
+                            <div class="wrap">
+                                <a href="#" class="cover">
+                                    <img src="./img/img3.png" alt="">
                                 </a>
-                                <p class="des">
-                                    One of the best corporate fashion brands in Sydney
-                                </p>
-                            </div>
-                            <div class="bottom">
-                                <div class="teacher">
-                                    <div class="avatar">
-                                        <img src="img/avt.png" alt="">
-                                    </div>
-                                    <div class="name">Vương Đặng</div>
+                                <div class="info">
+                                    <a class="name" href="#">
+                                        Laravel framework
+                                    </a>
+                                    <p class="des">
+                                        One of the best corporate fashion brands in Sydney
+                                    </p>
                                 </div>
-                                <div class="register-btn">Đăng Ký</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="section-4">
-            <div class="container">
-                <div class="textbox">
-                    <h3 class="sub-title">Khóa học</h3>
-                    <h2 class="main-title">Liên quan</h2>
-                </div>
-                <div class="list row">
-                    <div class="col-md-4 course">
-                        <div class="wrap">
-                            <a href="#" class="cover">
-                                <img src="./img/img.png" alt="">
-                            </a>
-                            <div class="info">
-                                <a class="name" href="#">
-                                    Reactjs Advanced
-                                </a>
-                                <p class="des">
-                                    One of the best corporate fashion brands in Sydney
-                                </p>
-                            </div>
-                            <div class="bottom">
-                                <div class="teacher">
-                                    <div class="avatar">
-                                        <img src="img/avt.png" alt="">
+                                <div class="bottom">
+                                    <div class="teacher">
+                                        <div class="avatar">
+                                            <img src="img/avt.png" alt="">
+                                        </div>
+                                        <div class="name">Vương Đặng</div>
                                     </div>
-                                    <div class="name">Vương Đặng</div>
+                                    <div class="register-btn">Đăng Ký</div>
                                 </div>
-                                <div class="register-btn">Đăng Ký</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 course">
-                        <div class="wrap">
-                            <a href="#" class="cover">
-                                <img src="./img/img2.png" alt="">
-                            </a>
-                            <div class="info">
-                                <a class="name" href="#">
-                                    Nodejs Advanced
-                                </a>
-                                <p class="des">
-                                    One of the best corporate fashion brands in Sydney
-                                </p>
-                            </div>
-                            <div class="bottom">
-                                <div class="teacher">
-                                    <div class="avatar">
-                                        <img src="img/avt.png" alt="">
-                                    </div>
-                                    <div class="name">Vương Đặng</div>
-                                </div>
-                                <div class="register-btn">Đăng Ký</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 course">
-                        <div class="wrap">
-                            <a href="#" class="cover">
-                                <img src="./img/img3.png" alt="">
-                            </a>
-                            <div class="info">
-                                <a class="name" href="#">
-                                    Laravel framework
-                                </a>
-                                <p class="des">
-                                    One of the best corporate fashion brands in Sydney
-                                </p>
-                            </div>
-                            <div class="bottom">
-                                <div class="teacher">
-                                    <div class="avatar">
-                                        <img src="img/avt.png" alt="">
-                                    </div>
-                                    <div class="name">Vương Đặng</div>
-                                </div>
-                                <div class="register-btn">Đăng Ký</div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
+
     </main>
     <footer id="footer">
         <div class="container">

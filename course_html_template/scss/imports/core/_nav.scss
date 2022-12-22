@@ -34,12 +34,10 @@
             &:hover {
                 background: $gray-cl;
             }
-            &.active {
+            .active {
                 background: $main-cl;
                 @include transition-default;
-                a {
-                    color: $white-cl;
-                }
+                color: $white-cl;
             }
         }
     }

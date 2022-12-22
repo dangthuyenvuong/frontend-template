@@ -11,6 +11,7 @@
 	box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.08);
 	z-index: 100;
 	.wrap {
+		background: white;
 		max-width: $max-width;
 		margin: 0 auto;
 		height: var(--heightHeader);
