@@ -41,7 +41,6 @@ function homePage() {
             wrapAround: false,
             freeScroll: true,
             cellAlign: 'left',
-            lazyLoad: 3,
             imagesLoaded: true,
             prevNextButtons: false
         });
@@ -70,6 +69,8 @@ function homePage() {
         ctrNextGallery.on('click', function () {
             $carouselGallery.flickity('next');
         });
+
+
     }
 
     teamSlider();
