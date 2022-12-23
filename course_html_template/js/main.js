@@ -41,6 +41,7 @@ function homePage() {
             wrapAround: false,
             freeScroll: true,
             cellAlign: 'left',
+            lazyLoad: 3,
             imagesLoaded: true,
             prevNextButtons: false
         });
