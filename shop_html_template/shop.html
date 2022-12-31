@@ -16,7 +16,7 @@
     href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <link rel="stylesheet" href="./css/custom.css">
+  <link rel="stylesheet" href="./dist/tailwindcss.css">
 
   <!-- Theme CSS -->
   <link rel="stylesheet" href="/css/theme.min.css">
@@ -1555,7 +1555,7 @@
       </button>
 
       <!-- Collapse -->
-      <div class="collapse navbar-collapse" id="topbarCollapse">
+      <div class="navbar-collapse" id="topbarCollapse">
 
         <!-- Nav -->
         <ul class="nav nav-divided navbar-nav mr-auto">
@@ -1563,7 +1563,7 @@
 
             <!-- Toggle -->
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
-              <img class="mb-1 mr-1" src="./img/flags/usa.svg" alt="..." /> United States
+              <img class="mb-1 mr-1 inline-block" src="./img/flags/usa.svg" alt="..." /> United States
             </a>
 
             <!-- Menu -->
@@ -1666,7 +1666,7 @@
       </button>
 
       <!-- Collapse -->
-      <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-collapse" id="navbarCollapse">
 
         <!-- Nav -->
         <ul class="navbar-nav mx-auto">
@@ -1760,13 +1760,13 @@
                   <div class="form-group">
                     <ul class="list-styled mb-0" id="productsNav">
                       <li class="list-styled-item">
-                        <a class="list-styled-link" href="#">
+                        <a class="list-styled-link " href="#">
                           All Products
                         </a>
                       </li>
                       <li class="list-styled-item">
                         <!-- Toggle -->
-                        <a class="list-styled-link"  href="#blousesCollapse">
+                        <a class="list-styled-link font-bold"  href="#blousesCollapse">
                           Blouses and Shirts
                         </a>
 
@@ -1846,35 +1846,35 @@
                   <div class="form-group form-group-overflow mb-6" id="seasonGroup">
                     <div class="custom-control custom-checkbox mb-3">
                       <input class="custom-control-input" id="seasonOne" type="checkbox" checked>
-                      <label class="custom-control-label" for="seasonOne">
+                      <label class="custom-control-label flex items-center" for="seasonOne">
                         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
                         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
                         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
                         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
                         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
-                        <span class="text-small">from 5 star</span>
+                        <span class="text-small inline-block ml-2">from 5 star</span>
                       </label>
                     </div>
                     <div class="custom-control custom-checkbox mb-3">
                       <input class="custom-control-input" id="seasonTwo" type="checkbox">
-                      <label class="custom-control-label" for="seasonOne">
+                      <label class="custom-control-label flex items-center" for="seasonOne">
                         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
                         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
                         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
                         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14" viewBox="0 0 12 12" class="star-icon"><g fill="none" fill-rule="evenodd"><path fill="#b8b8b8" transform="matrix(-1 0 0 1 11 1)" d="M5 0v8.476L1.91 10l.424-3.562L0 3.821l3.353-.678L5 0z"></path><path fill="#b8b8b8" transform="translate(1 1)" d="M5 0v8.476L1.91 10l.424-3.562L0 3.821l3.353-.678L5 0z"></path></g></svg>
-                        <span class="text-small">from 4 star</span>
+                        <span class="text-small inline-block ml-2">from 4 star</span>
                       </label>
                     </div>
                     <div class="custom-control custom-checkbox">
                       <input class="custom-control-input" id="seasonThree" type="checkbox">
-                      <label class="custom-control-label" for="seasonOne">
+                      <label class="custom-control-label flex items-center" for="seasonOne">
                         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
                         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
                         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14" viewBox="0 0 12 12" class="star-icon"><g fill="none" fill-rule="evenodd"><path fill="#b8b8b8" transform="matrix(-1 0 0 1 11 1)" d="M5 0v8.476L1.91 10l.424-3.562L0 3.821l3.353-.678L5 0z"></path><path fill="#b8b8b8" transform="translate(1 1)" d="M5 0v8.476L1.91 10l.424-3.562L0 3.821l3.353-.678L5 0z"></path></g></svg>
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14" viewBox="0 0 12 12" class="star-icon"><g fill="none" fill-rule="evenodd"><path fill="#b8b8b8" transform="matrix(-1 0 0 1 11 1)" d="M5 0v8.476L1.91 10l.424-3.562L0 3.821l3.353-.678L5 0z"></path><path fill="#b8b8b8" transform="translate(1 1)" d="M5 0v8.476L1.91 10l.424-3.562L0 3.821l3.353-.678L5 0z"></path></g></svg>
-                        <span class="text-small">from 3 star</span>
+                        <span class="text-small inline-block ml-2">from 3 star</span>
                       </label>
                     </div>
                   </div>
@@ -2026,7 +2026,7 @@
 
             </div>
           </div>
-          <h4 class="mb-5">Tìm kiếm `Clothing`</h4>
+          <h4 class="mb-5 text-2xl">Searching for `Clothing`</h4>
           <!-- Products -->
           <div class="row">
             <div class="col-6 col-md-4">
