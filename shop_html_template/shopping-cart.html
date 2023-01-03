@@ -16,8 +16,8 @@
     href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <link rel="stylesheet" href="/dist/tailwindcss.css">
-  <link rel="stylesheet" href="/css/tailwindcss.css">
+  <link rel="stylesheet" href="./dist/tailwindcss.css">
+  <link rel="stylesheet" href="./css/custom.css">
 
   <title>Shopper</title>
 
@@ -433,11 +433,174 @@
   </div>
 
 
-  <!-- Search -->
-  <div class="card-product-price">
+  <div class="modal fixed-right fade" id="modalSearch" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-vertical" role="document">
+      <div class="modal-content">
+
+        <!-- Close -->
+        <button type="button" class="close !outline-none" data-dismiss="modal" aria-label="Close">
+          <i class="fe fe-x" aria-hidden="true"></i>
+        </button>
+
+        <!-- Header-->
+        <div class="modal-header line-height-fixed font-size-lg">
+          <strong class="mx-auto">Search Products</strong>
+        </div>
+
+        <!-- Body: Form -->
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label class="sr-only" for="modalSearchCategories">Categories:</label>
+              <select class="custom-select" id="modalSearchCategories">
+                <option selected>All Categories</option>
+                <option>Women</option>
+                <option>Men</option>
+                <option>Kids</option>
+              </select>
+            </div>
+            <div class="input-group input-group-merge">
+              <input class="form-control" type="search" placeholder="Search">
+              <div class="input-group-append">
+                <button class="btn btn-outline-border" type="submit">
+                  <i class="fe fe-search"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- Body: Results (add `.d-none` to disable it) -->
+        <div class="modal-body border-top font-size-sm">
+
+          <!-- Heading -->
+          <p>Search Results:</p>
+
+          <!-- Items -->
+          <div class="row align-items-center position-relative mb-5">
+            <div class="col-4 col-md-3">
+
+              <!-- Image -->
+              <img class="img-fluid" src="./img/products/product-5.jpg" alt="...">
+
+            </div>
+            <div class="col position-static">
+
+              <!-- Text -->
+              <p class="mb-0 font-weight-bold">
+                <a class="stretched-link text-body" href="./product.html">Leather mid-heel Sandals</a> <br>
+                <div class="card-product-price">
                     <span class="sale text-primary">45,000</span>
                     <span class="text-muted line-through ml-1 inline-block">60,000</span>
                 </div>
+              </p>
+
+            </div>
+          </div>
+          <div class="row align-items-center position-relative mb-5">
+            <div class="col-4 col-md-3">
+
+              <!-- Image -->
+              <img class="img-fluid" src="./img/products/product-6.jpg" alt="...">
+
+            </div>
+            <div class="col position-static">
+
+              <!-- Text -->
+              <p class="mb-0 font-weight-bold">
+                <a class="stretched-link text-body" href="./product.html">Cotton floral print Dress</a> <br>
+                <div class="card-product-price">
+                    <span class="sale text-primary">45,000</span>
+                    <span class="text-muted line-through ml-1 inline-block">60,000</span>
+                </div>
+              </p>
+
+            </div>
+          </div>
+          <div class="row align-items-center position-relative mb-5">
+            <div class="col-4 col-md-3">
+
+              <!-- Image -->
+              <img class="img-fluid" src="./img/products/product-7.jpg" alt="...">
+
+            </div>
+            <div class="col position-static">
+
+              <!-- Text -->
+              <p class="mb-0 font-weight-bold">
+                <a class="stretched-link text-body" href="./product.html">Leather Sneakers</a> <br>
+                <div class="card-product-price">
+                    <span class="sale text-primary">45,000</span>
+                    <span class="text-muted line-through ml-1 inline-block">60,000</span>
+                </div>
+              </p>
+
+            </div>
+          </div>
+          <div class="row align-items-center position-relative mb-5">
+            <div class="col-4 col-md-3">
+
+              <!-- Image -->
+              <img class="img-fluid" src="./img/products/product-8.jpg" alt="...">
+
+            </div>
+            <div class="col position-static">
+
+              <!-- Text -->
+              <p class="mb-0 font-weight-bold">
+                <a class="stretched-link text-body" href="./product.html">Cropped cotton Top</a> <br>
+                <div class="card-product-price">
+                    <span class="sale text-primary">45,000</span>
+                    <span class="text-muted line-through ml-1 inline-block">60,000</span>
+                </div>
+              </p>
+
+            </div>
+          </div>
+          <div class="row align-items-center position-relative mb-5">
+            <div class="col-4 col-md-3">
+
+              <!-- Image -->
+              <img class="img-fluid" src="./img/products/product-9.jpg" alt="...">
+
+            </div>
+            <div class="col position-static">
+
+              <!-- Text -->
+              <p class="mb-0 font-weight-bold">
+                <a class="stretched-link text-body" href="./product.html">Floral print midi Dress</a> <br>
+                <div class="card-product-price">
+                    <span class="sale text-primary">45,000</span>
+                    <span class="text-muted line-through ml-1 inline-block">60,000</span>
+                </div>
+              </p>
+
+            </div>
+          </div>
+
+          <!-- Button -->
+          <a class="btn btn-link px-0 text-reset" href="./shop.html">
+            View All <i class="fe fe-arrow-right ml-2"></i>
+          </a>
+
+        </div>
+
+        <!-- Body: Empty (remove `.d-none` to disable it) -->
+        <div class="d-none modal-body border">
+
+          <!-- Text -->
+          <p class="mb-3 font-size-sm text-center">
+            Nothing matches your search
+          </p>
+          <p class="mb-0 font-size-sm text-center">
+            😞
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
 
 
   <!-- Shopping Cart -->
@@ -1736,7 +1899,7 @@
         <div class="col-12 col-md-5 col-lg-4 offset-lg-1">
 
           <!-- Total -->
-          <div class="card mb-7 bg-light">
+          <div class="product-card card mb-7 bg-light">
             <div class="card-body">
               <ul class="list-group list-group-sm list-group-flush-y list-group-flush-x">
                 <li class="list-group-item d-flex">

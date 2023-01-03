@@ -13,12 +13,22 @@
     font-weight: bold;
 }
 
+.card-product-title {
+    height: 66px;
+    padding: 5px 0;
+}
+.card-product-category {
+    height: 21px;
+    padding: 5px 0;
+}
+
 .card-product-rating {
     display: flex;
     align-items: center;
     font-size: 0.875rem;
     margin-top: .5rem;
     height: 21px;
+    padding: 5px 0;
 }
 
 .card-product-rating svg {
@@ -29,6 +39,7 @@
 .card-product-price {
     font-weight: bold;
     height: 32px;
+    padding: 5px 0;
 }
 
 .card-product-price .sale {
@@ -148,7 +159,7 @@
     bottom: 0;
 }
 
-.card-img {
+.product-card .card-img {
     height: 300px;
 }
 
@@ -172,6 +183,6 @@
     display: -webkit-box;
 }
 
-.card-body {
+.product-card .card-body {
     padding: 0 !important;
 }
