@@ -38,7 +38,7 @@
 
 .card-product-price {
     font-weight: bold;
-    height: 32px;
+    height: 43px;
     padding: 5px 0;
 }
 
@@ -185,4 +185,13 @@
 
 .product-card .card-body {
     padding: 0 !important;
+}
+
+
+.product-view-cart {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.collapse {
+    visibility: unset;
 }
