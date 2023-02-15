@@ -493,16 +493,12 @@
   width: 100%
 }
 
+.min-w-\[300px\] {
+  min-width: 300px
+}
+
 .max-w-\[300px\] {
   max-width: 300px
-}
-
-.max-w-\[\] {
-  max-width: 
-}
-
-.max-w-\[120px\] {
-  max-width: 120px
 }
 
 .flex-1 {
@@ -1019,6 +1015,10 @@
 
 .gap-1 {
   gap: 0.25rem
+}
+
+.gap-4 {
+  gap: 1rem
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -1726,12 +1726,12 @@
   line-height: 1.25rem
 }
 
-.font-light {
-  font-weight: 300
-}
-
 .font-bold {
   font-weight: 700
+}
+
+.font-light {
+  font-weight: 300
 }
 
 .uppercase {
